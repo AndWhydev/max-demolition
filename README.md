@@ -78,15 +78,14 @@ These are flagged in the HTML with `TODO:` markers. Replace before going live or
 - [ ] **GA4 measurement ID** — uncomment and replace `G-XXXXXXX` in the `<head>`
 - [ ] **Google Ads conversion ID + labels** — replace `AW-XXXXXXX/abc123` (call conversion) and `AW-XXXXXXX/xyz456` (form conversion) in the JS `trackCallConversion()` and `trackFormConversion()` functions
 
-### Form endpoint — Formspree (wired, needs form ID)
-The quote form already POSTs to Formspree. Before launching ads:
-
-1. Sign up at https://formspree.io with `info@maxhaulage.com.au` as the receiving address.
-2. Create a new form, copy the form ID (looks like `xqkrgldz`).
-3. In `index.html`, find `FORMSPREE_ENDPOINT` (one occurrence near the bottom of the `<script>` block) and replace `YOUR_FORM_ID` with the real ID.
-4. Submit one test entry from the live URL to confirm the email lands in the inbox (and check spam once so Formspree mail isn't filtered).
+### Form endpoint — Formspree (live)
+The quote form POSTs to `https://formspree.io/f/mvzndklp` and delivers to `info@maxhaulage.com.au` (configured inside the Formspree project).
 
 Form payload also sends `_subject` (so emails arrive with a useful subject line like *"New quote request — house-demolition (Bondi)"*) and `_source` (so we can tell hero form vs final-CTA form apart).
+
+If a submission fails (Formspree down, network issue, unverified inbox), the form now shows a visible error state with a tap-to-call CTA instead of silently faking success. Failed submissions do NOT fire the Google Ads conversion event.
+
+**Verification gotcha**: Formspree sends a one-time confirmation email to `info@maxhaulage.com.au` the first time a submission arrives. Click that link (check spam) or future submissions get held.
 
 ### Imagery — wired in
 - [x] **Hero background** — `assets/hero.webp` (excavator mid-takedown, dust)
