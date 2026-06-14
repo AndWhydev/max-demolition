@@ -332,39 +332,6 @@
       transition: transform 0.35s var(--ease-out);
       box-shadow: 0 1px 0 rgba(18,18,18,0.04);
     }
-    /* Above the main topbar — visible from first paint on mobile */
-    .pre-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 8px 5vw;
-      background: var(--color-accent);
-      color: #121212;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    .pre-bar a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #121212;
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-    .pre-bar a svg { width: 13px; height: 13px; }
-    .pre-bar .pre-bar__label { opacity: 0.85; }
-    @media (max-width: 380px) {
-      .pre-bar .pre-bar__label { display: none; }
-      .pre-bar { justify-content: center; }
-    }
-    @media (min-width: 900px) {
-      .pre-bar { display: none; }
-    }
     .topbar__inner {
       display: flex;
       align-items: center;
@@ -2054,13 +2021,6 @@
        TOPBAR
        ============================================================ -->
   <header class="topbar" id="topbar" role="banner">
-    <div class="pre-bar" role="region" aria-label="Quick contact">
-      <span class="pre-bar__label">Free fixed-price quotes &mdash; Sydney-wide</span>
-      <a href="tel:0416355632" onclick="trackCallConversion('prebar')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
-        0416 355 632
-      </a>
-    </div>
     <div class="topbar__inner">
       <a href="#" class="topbar__logo" aria-label="Max Demolition &amp; Excavation home">
         <img src="/assets/logo.webp" alt="Max Demolition &amp; Excavation" width="220" height="64">
