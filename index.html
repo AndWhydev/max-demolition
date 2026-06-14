@@ -549,8 +549,12 @@
       gap: 36px;
     }
     @media (min-width: 1024px) {
-      .hero__container { grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; padding: 0 6vw; }
+      /* Form column is a fixed 420px so inputs never get crushed; headline takes the rest. */
+      .hero__container { grid-template-columns: minmax(0, 1fr) 420px; gap: 56px; align-items: center; padding: 0 5vw; }
       .hero { padding: 160px 0 100px; min-height: 100svh; }
+    }
+    @media (min-width: 1280px) {
+      .hero__container { grid-template-columns: minmax(0, 1fr) 460px; gap: 80px; padding: 0 6vw; }
     }
     /* MOBILE-FIRST: form/CTA first, brand storytelling after */
     @media (max-width: 1023px) {
@@ -583,8 +587,8 @@
 
     .hero-heading {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(38px, 8vw, 124px);
-      line-height: 0.9;
+      font-size: clamp(38px, 6.2vw, 88px);
+      line-height: 0.92;
       letter-spacing: -0.035em;
       text-transform: uppercase;
       margin-bottom: 24px;
