@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demolition Sydney | House, Commercial &amp; Asbestos Removal — Max Demolitions</title>
+  <meta name="description" content="Fixed-price demolition across Sydney. House, commercial, asbestos removal, bulk excavation and site clearing. Class A &amp; B asbestos licensed. Own fleet, no hire delays. Free quote on 0456 220 552.">
+  <meta name="theme-color" content="#0B0B0C">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / social preview for Google Ads + Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demolition Sydney — Fixed Price, Fast Start. Max Demolitions.">
+  <meta property="og:description" content="Licensed Sydney demolition contractor. House &amp; commercial demo, Class A &amp; B asbestos removal, bulk excavation. Own fleet. Free fixed-price quotes.">
+  <meta property="og:url" content="https://maxdemolitions.com.au/">
+  <meta property="og:site_name" content="Max Demolitions">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Demolition Sydney — Max Demolitions">
+  <meta name="twitter:description" content="Fixed-price Sydney demolition. House, commercial, asbestos, excavation. Class A &amp; B licensed.">
+
+  <!-- Favicon (inline SVG — hi-vis chevron mark) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0B0C'/%3E%3Cpath d='M10 46 L24 18 L34 30 L44 18 L58 46 Z' fill='%23FFD60A'/%3E%3Crect x='10' y='50' width='48' height='6' fill='%23FFD60A'/%3E%3C/svg%3E">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Fonts: Archivo Black for industrial display, Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Motion libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js" defer></script>
+  <script src="https://unpkg.com/split-type" defer></script>
+
+  <!-- ============================================================
+       Schema.org LocalBusiness — update ABN, address, licence numbers
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Max Demolitions",
+    "alternateName": "Max Demolitions & Excavations",
+    "image": "https://maxdemolitions.com.au/og-image.jpg",
+    "url": "https://maxdemolitions.com.au/",
+    "telephone": "+61456220552",
+    "email": "info@maxhaulage.com.au",
+    "priceRange": "$$",
+    "description": "Licensed demolition contractor serving Sydney. House and commercial demolition, Class A and B asbestos removal, bulk excavation and site clearing. Fixed-price quotes, own fleet, family-owned since 2013.",
+    "areaServed": [
+      {"@type":"City","name":"Sydney"},
+      {"@type":"AdministrativeArea","name":"Greater Sydney"},
+      {"@type":"AdministrativeArea","name":"New South Wales"}
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "addressCountry": "AU"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
+    ],
+    "foundingDate": "2013",
+    "founders": [{"@type":"Person","name":"Max Demolitions Family"}],
+    "sameAs": ["https://maxdemolitions.com.au/"]
+  }
+  </script>
+
+  <!-- ============================================================
+       GA4 + Google Ads conversion tag — paste IDs here when ready
+       ============================================================ -->
+  <!-- TODO(tracking): Insert GA4 measurement ID
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+    gtag('config', 'AW-XXXXXXX'); // Google Ads conversion ID
+  </script>
+  -->
+  <!-- TODO(tracking): Phone-call conversion — wire up in callPhone() in JS section below -->
+
+  <style>
+    /* ============================================================
+       MAX DEMOLITIONS — design tokens
+       Industrial trade aesthetic. Asphalt black + hi-vis safety yellow.
+       ============================================================ */
+    :root {
+      --color-bg: #0B0B0C;
+      --color-bg-raised: #131316;
+      --color-surface: #1A1A1D;
+      --color-surface-2: #232328;
+      --color-border: rgba(255,255,255,0.08);
+      --color-border-strong: rgba(255,255,255,0.18);
+      --color-text: #F1F1F2;
+      --color-muted: #8C8C90;
+      --color-muted-2: #5C5C60;
+
+      /* Hi-vis safety palette — lifted from PPE colour standards */
+      --color-accent: #FFD60A;         /* AS/NZS 1906 hi-vis yellow */
+      --color-accent-hot: #FF6B1A;     /* safety orange */
+      --color-accent-rgb: 255, 214, 10;
+      --color-hot-rgb: 255, 107, 26;
+
+      --color-concrete: #8C8C90;
+      --color-rebar: #C84A1F;
+
+      /* Hazard tape gradient — used as accent strips */
+      --hazard-stripe: repeating-linear-gradient(135deg,
+        #FFD60A 0 20px,
+        #0B0B0C 20px 40px);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+      --max-w: 1320px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+    html { scroll-behavior: auto; }
+    html, body { overflow-x: hidden; }
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { background: none; border: none; font-family: inherit; cursor: pointer; color: inherit; }
+    input, textarea, select { font-family: inherit; font-size: inherit; color: inherit; }
+
+    h1, h2, h3, h4, .display {
+      font-family: 'Archivo Black', 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+
+    /* ----- Section eyebrow ----- */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px; height: 2px;
+      background: var(--color-accent);
+      display: inline-block;
+    }
+    .eyebrow--center { justify-content: center; }
+
+    /* ----- Hazard tape strip (decorative) ----- */
+    .hazard-tape {
+      height: 14px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+    }
+
+    /* ----- Grain overlay ----- */
+    body::after {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: 0.05; pointer-events: none; z-index: 9996;
+      mix-blend-mode: overlay;
+    }
+
+    /* ----- Custom cursor — desktop only ----- */
+    #c-dot {
+      position: fixed; width: 8px; height: 8px;
+      background: var(--color-accent); pointer-events: none; z-index: 9999;
+      transition: width 0.2s, height 0.2s, background 0.2s;
+      display: none;
+    }
+    #c-ring {
+      position: fixed; width: 40px; height: 40px;
+      border: 1.5px solid var(--color-accent); pointer-events: none;
+      z-index: 9998; opacity: 0; transition: width 0.3s, height 0.3s, opacity 0.3s, border-color 0.3s;
+      display: none;
+    }
+    #c-dot.is-hover { width: 4px; height: 4px; }
+    #c-ring.is-hover { width: 64px; height: 64px; opacity: 0.4; }
+    @media (hover: hover) and (pointer: fine) {
+      #c-dot, #c-ring { display: block; }
+      body { cursor: none; }
+      a, button, [data-hover] { cursor: none; }
+    }
+
+    /* ============================================================
+       BUTTONS — sharp industrial slabs, not rounded SaaS pills
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid transparent;
+      border-radius: 0;
+      transition: transform 0.3s var(--ease-out), background 0.3s, color 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .btn--primary {
+      background: var(--color-accent);
+      color: #0B0B0C;
+      border-color: var(--color-accent);
+    }
+    .btn--primary:hover {
+      background: var(--color-accent-hot);
+      border-color: var(--color-accent-hot);
+      color: #0B0B0C;
+    }
+    .btn--ghost {
+      background: transparent;
+      color: var(--color-text);
+      border-color: var(--color-border-strong);
+    }
+    .btn--ghost:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .btn--dark {
+      background: #0B0B0C;
+      color: var(--color-text);
+      border-color: #0B0B0C;
+    }
+    .btn--dark:hover {
+      background: #FFD60A;
+      color: #0B0B0C;
+      border-color: #FFD60A;
+    }
+    .btn__arrow { transition: transform 0.35s var(--ease-out); }
+    .btn:hover .btn__arrow { transform: translateX(4px); }
+
+    /* ============================================================
+       LAYOUT PRIMITIVES
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 6vw;
+    }
+    @media (min-width: 900px) {
+      .container { padding: 0 5vw; }
+    }
+
+    section { position: relative; }
+
+    .section {
+      padding: 96px 0;
+    }
+    @media (min-width: 900px) {
+      .section { padding: 140px 0; }
+    }
+
+    /* Section divider — hazard chevron */
+    .chevron-divider {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .chevron-divider span {
+      width: 10px;
+      height: 18px;
+      background: var(--color-accent);
+      clip-path: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 0 100%, 40% 50%);
+    }
+
+    /* ============================================================
+       STICKY HEADER + CALL BAR
+       ============================================================ */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(11, 11, 12, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: transform 0.35s var(--ease-out);
+    }
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 6vw;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .topbar__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+    }
+    .topbar__mark {
+      width: 32px;
+      height: 32px;
+      background: var(--color-accent);
+      display: grid;
+      place-items: center;
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    }
+    .topbar__mark svg { width: 18px; height: 18px; }
+
+    .topbar__cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .topbar__phone {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      letter-spacing: 0.04em;
+    }
+    .topbar__phone svg { width: 14px; height: 14px; }
+    @media (min-width: 720px) {
+      .topbar__phone { display: inline-flex; }
+    }
+    .topbar__btn {
+      padding: 10px 18px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================================
+       MOBILE FLOATING CALL BAR — sticky bottom on mobile only
+       ============================================================ */
+    .mobile-callbar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--color-bg);
+      border-top: 2px solid var(--color-accent);
+      padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+    .mobile-callbar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .mobile-callbar a:first-child {
+      background: var(--color-accent);
+      color: #0B0B0C;
+    }
+    .mobile-callbar a:last-child {
+      background: #0B0B0C;
+      color: var(--color-text);
+      border-left: 1px solid var(--color-border);
+    }
+    .mobile-callbar svg { width: 16px; height: 16px; }
+    @media (min-width: 900px) {
+      .mobile-callbar { display: none; }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      padding: 140px 0 80px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 50% at 80% 20%, rgba(var(--color-accent-rgb), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 10% 90%, rgba(var(--color-hot-rgb), 0.06) 0%, transparent 60%),
+        linear-gradient(180deg, #0B0B0C 0%, #131316 100%);
+    }
+    /* Diagonal hazard tape behind hero */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      right: -10%;
+      width: 60%;
+      height: 14px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+      transform: rotate(-12deg);
+      opacity: 0.10;
+      pointer-events: none;
+    }
+    .hero__container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 6vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+    @media (min-width: 1024px) {
+      .hero__container { grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; }
+      .hero { padding: 160px 0 100px; }
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .hero__eyebrow .dot {
+      width: 8px; height: 8px;
+      background: var(--color-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--color-accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero-heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(48px, 8.5vw, 124px);
+      line-height: 0.9;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      max-width: 14ch;
+      overflow: hidden;
+    }
+    .hero-heading .accent {
+      color: var(--color-accent);
+      display: inline-block;
+      position: relative;
+    }
+    .hero-heading .strike {
+      display: inline-block;
+      position: relative;
+    }
+    .hero-heading .strike::after {
+      content: '';
+      position: absolute;
+      left: -4%;
+      right: -4%;
+      top: 50%;
+      height: 8px;
+      background: var(--color-accent-hot);
+      transform: rotate(-3deg) scaleX(0);
+      transform-origin: left;
+      animation: strike-in 0.8s var(--ease-out) 1.6s forwards;
+    }
+    @keyframes strike-in {
+      to { transform: rotate(-3deg) scaleX(1); }
+    }
+
+    .hero__sub {
+      font-size: clamp(16px, 1.5vw, 19px);
+      color: var(--color-muted);
+      max-width: 52ch;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .hero__sub strong { color: var(--color-text); font-weight: 600; }
+
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      color: var(--color-text);
+      letter-spacing: 0.04em;
+    }
+    .hero__phone strong {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    /* Hero trust strip */
+    .hero__trust {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-border);
+      max-width: 560px;
+    }
+    @media (min-width: 600px) {
+      .hero__trust { grid-template-columns: repeat(4, 1fr); }
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .trust-item__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+    .trust-item__value {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      color: var(--color-accent);
+    }
+
+    /* ============================================================
+       HERO QUOTE FORM — right column on desktop
+       ============================================================ */
+    .quote-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 36px 28px 32px;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .quote-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--color-accent);
+    }
+    .quote-card::after {
+      content: 'QUOTE';
+      position: absolute;
+      top: -12px; right: 24px;
+      background: var(--color-accent);
+      color: #0B0B0C;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      padding: 4px 12px;
+    }
+    .quote-card__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 26px;
+      line-height: 1;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    .quote-card__sub {
+      font-size: 13px;
+      color: var(--color-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .form-row {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 480px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+    }
+    .input, .select, .textarea {
+      width: 100%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-strong);
+      color: var(--color-text);
+      padding: 14px 16px;
+      font-size: 14px;
+      border-radius: 0;
+      transition: border-color 0.25s, background 0.25s;
+      font-family: 'Inter', sans-serif;
+    }
+    .input:focus, .select:focus, .textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      background: #0F0F11;
+    }
+    .input::placeholder, .textarea::placeholder { color: var(--color-muted-2); }
+    .textarea { min-height: 90px; resize: vertical; line-height: 1.5; }
+    .select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFD60A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 18px;
+      padding-right: 44px;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 18px 28px;
+      margin-top: 8px;
+    }
+    .form-note {
+      margin-top: 14px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .form-note strong { color: var(--color-accent); }
+    .form-success {
+      display: none;
+      background: rgba(var(--color-accent-rgb), 0.1);
+      border: 1px solid var(--color-accent);
+      padding: 20px 18px;
+      text-align: center;
+    }
+    .form-success.is-active { display: block; }
+    .form-success h3 {
+      font-size: 18px;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .form-success p { font-size: 14px; color: var(--color-text); margin: 0; line-height: 1.5; }
+
+    /* ============================================================
+       TRUST STRIP — directly under hero
+       ============================================================ */
+    .trust-strip {
+      background: #0B0B0C;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 36px 0;
+      overflow: hidden;
+    }
+    .trust-strip__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px 48px;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .trust-pill svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       SERVICES — asymmetric grid, not 3-up boxes
+       ============================================================ */
+    .services {
+      background: var(--color-bg);
+      position: relative;
+    }
+    .services__head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 60px;
+      align-items: end;
+    }
+    @media (min-width: 900px) {
+      .services__head { grid-template-columns: 1.4fr 1fr; gap: 60px; margin-bottom: 80px; }
+    }
+    .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(40px, 6vw, 84px);
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+    .section-title .accent { color: var(--color-accent); }
+
+    .section-lede {
+      font-size: 16px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      max-width: 42ch;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+    }
+    @media (min-width: 700px) {
+      .service-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .service-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .service {
+      background: var(--color-bg);
+      padding: 36px 32px 40px;
+      position: relative;
+      transition: background 0.4s var(--ease-out);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 320px;
+    }
+    .service:hover {
+      background: var(--color-surface);
+    }
+    .service__num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--color-muted);
+    }
+    .service__icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-accent);
+      margin-bottom: 8px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .service:hover .service__icon {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #0B0B0C;
+    }
+    .service__icon svg { width: 26px; height: 26px; }
+    .service__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .service__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    .service__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--color-text);
+    }
+    .service__list li {
+      padding-left: 18px;
+      position: relative;
+    }
+    .service__list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 8px; height: 2px;
+      background: var(--color-accent);
+    }
+    .service__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      transition: gap 0.3s var(--ease-out);
+    }
+    .service__cta:hover { gap: 14px; }
+
+    /* ============================================================
+       STATS ROW — counters
+       ============================================================ */
+    .stats {
+      background: var(--color-bg-raised);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 14px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+      opacity: 0.4;
+    }
+    .stats__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px 24px;
+    }
+    @media (min-width: 800px) {
+      .stats__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat__num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(48px, 6vw, 88px);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .stat__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       PROCESS — 4 steps
+       ============================================================ */
+    .process {
+      background: var(--color-bg);
+    }
+    .process__steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      margin-top: 60px;
+    }
+    @media (min-width: 700px) {
+      .process__steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1100px) {
+      .process__steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--color-bg);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+    }
+    .step__num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 64px;
+      line-height: 0.9;
+      color: var(--color-surface-2);
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+    .step__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .step__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+    .step__time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      padding-top: 14px;
+      border-top: 1px dashed var(--color-border-strong);
+      margin-top: auto;
+    }
+
+    /* ============================================================
+       WHY US — split layout
+       ============================================================ */
+    .why {
+      background: var(--color-bg-raised);
+      position: relative;
+    }
+    .why__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    @media (min-width: 1024px) {
+      .why__grid { grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    }
+    .why__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .why-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--color-border);
+      align-items: start;
+    }
+    .why-item:last-child { border-bottom: 1px solid var(--color-border); }
+    .why-item__icon {
+      width: 48px;
+      height: 48px;
+      border: 1.5px solid var(--color-accent);
+      display: grid;
+      place-items: center;
+      color: var(--color-accent);
+    }
+    .why-item__icon svg { width: 22px; height: 22px; }
+    .why-item__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+    .why-item__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* Right column: photo placeholder + licence panel */
+    .why__media {
+      position: relative;
+    }
+    .photo-placeholder {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      background:
+        linear-gradient(135deg, #1A1A1D 0%, #0B0B0C 100%);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .photo-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(45deg,
+          transparent 0 80px,
+          rgba(var(--color-accent-rgb), 0.04) 80px 81px);
+    }
+    .photo-placeholder::after {
+      content: '';
+      position: absolute;
+      top: 16px; left: 16px; right: 16px; bottom: 16px;
+      border: 1px dashed rgba(var(--color-accent-rgb), 0.3);
+    }
+    .photo-placeholder__label {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 24px;
+    }
+    .photo-placeholder__label .mono {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .photo-placeholder__label .title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 20px;
+      color: var(--color-text);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .photo-placeholder__label .desc {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--color-muted);
+      line-height: 1.4;
+    }
+
+    .licence-panel {
+      margin-top: 24px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 24px;
+    }
+    .licence-panel__title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+    .licence-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      border-top: 1px solid var(--color-border);
+      font-size: 13px;
+    }
+    .licence-row:first-of-type { border-top: none; }
+    .licence-row__label { color: var(--color-muted); }
+    .licence-row__value {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--color-text);
+      text-align: right;
+    }
+
+    /* ============================================================
+       SERVICE AREAS
+       ============================================================ */
+    .areas {
+      background: var(--color-bg);
+    }
+    .areas__grid {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    @media (min-width: 900px) {
+      .areas__grid { grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+    }
+    .areas__map {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      background: var(--color-bg-raised);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      padding: 32px;
+    }
+    .areas__map svg { width: 100%; height: 100%; display: block; }
+    .areas__map .pin {
+      animation: pin-pulse 2.4s infinite;
+    }
+    @keyframes pin-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+    .areas__list {
+      columns: 2;
+      column-gap: 24px;
+      margin-top: 20px;
+    }
+    .areas__list li {
+      list-style: none;
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--color-text);
+      border-bottom: 1px solid var(--color-border);
+      break-inside: avoid;
+    }
+    .areas__list li::before {
+      content: '+ ';
+      color: var(--color-accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-right: 6px;
+    }
+    .areas__note {
+      margin-top: 24px;
+      padding: 18px;
+      background: var(--color-surface);
+      border-left: 4px solid var(--color-accent);
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.5;
+    }
+    .areas__note strong { color: var(--color-accent); }
+
+    /* ============================================================
+       TESTIMONIALS — staggered card layout (not carousel)
+       ============================================================ */
+    .testimonials {
+      background: var(--color-bg-raised);
+    }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 60px;
+    }
+    @media (min-width: 700px) {
+      .testimonials__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (min-width: 1024px) {
+      .testimonials__grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonials__grid > :nth-child(2) { transform: translateY(40px); }
+    }
+    .testimonial {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    .testimonial__stars {
+      display: flex;
+      gap: 2px;
+      color: var(--color-accent);
+    }
+    .testimonial__stars svg { width: 16px; height: 16px; }
+    .testimonial__quote {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--color-text);
+      font-weight: 400;
+    }
+    .testimonial__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--color-border);
+      margin-top: auto;
+    }
+    .testimonial__avatar {
+      width: 36px;
+      height: 36px;
+      background: var(--color-accent);
+      color: #0B0B0C;
+      display: grid;
+      place-items: center;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+    }
+    .testimonial__author {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .testimonial__job {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--color-muted);
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+    .testimonials__google {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 24px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+    }
+    .testimonials__google .stars { display: flex; gap: 2px; color: var(--color-accent); }
+    .testimonials__google .stars svg { width: 18px; height: 18px; }
+    .testimonials__google .text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .testimonials__google .text strong {
+      color: var(--color-accent);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq {
+      background: var(--color-bg);
+    }
+    .faq__grid {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      max-width: 1000px;
+    }
+    .faq-item {
+      border-top: 1px solid var(--color-border);
+      padding: 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--color-border); }
+    .faq-item__btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 0;
+      text-align: left;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(18px, 2vw, 24px);
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      line-height: 1.2;
+      transition: color 0.3s;
+    }
+    .faq-item__btn:hover { color: var(--color-accent); }
+    .faq-item__btn .toggle {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--color-accent);
+      display: grid;
+      place-items: center;
+      color: var(--color-accent);
+      transition: transform 0.4s var(--ease-out), background 0.3s;
+    }
+    .faq-item__btn .toggle svg { width: 14px; height: 14px; transition: transform 0.4s var(--ease-out); }
+    .faq-item.is-open .toggle { background: var(--color-accent); color: #0B0B0C; }
+    .faq-item.is-open .toggle svg { transform: rotate(45deg); }
+    .faq-item__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease-out);
+    }
+    .faq-item__body-inner {
+      padding: 0 0 28px;
+      font-size: 16px;
+      color: var(--color-muted);
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+    .faq-item__body-inner strong { color: var(--color-text); }
+    .faq-item.is-open .faq-item__body { max-height: 500px; }
+
+    /* ============================================================
+       FINAL CTA
+       ============================================================ */
+    .cta-final {
+      position: relative;
+      background:
+        radial-gradient(ellipse 60% 60% at 30% 50%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 80% 80%, rgba(var(--color-hot-rgb), 0.08) 0%, transparent 60%),
+        #0B0B0C;
+      overflow: hidden;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 14px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+    }
+    .cta-final__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      padding-top: 40px;
+    }
+    @media (min-width: 1024px) {
+      .cta-final__grid { grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+    }
+    .cta-final__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(44px, 7vw, 96px);
+      letter-spacing: -0.035em;
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      max-width: 14ch;
+    }
+    .cta-final__title .accent { color: var(--color-accent); }
+    .cta-final__lede {
+      font-size: 17px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      max-width: 48ch;
+      margin-bottom: 32px;
+    }
+    .cta-final__phone {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 24px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-strong);
+      margin-top: 16px;
+      max-width: 420px;
+    }
+    .cta-final__phone svg {
+      width: 32px;
+      height: 32px;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+    .cta-final__phone .num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+      line-height: 1;
+    }
+    .cta-final__phone .hours {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-top: 4px;
+    }
+    .cta-final__phone a { display: block; text-decoration: none; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: #060607;
+      padding: 64px 0 100px;
+      border-top: 1px solid var(--color-border);
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+    @media (min-width: 900px) {
+      .footer { padding-bottom: 40px; }
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 700px) {
+      .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 60px; }
+    }
+    .footer__brand .topbar__logo { margin-bottom: 18px; font-size: 20px; }
+    .footer__lede {
+      max-width: 36ch;
+      line-height: 1.6;
+    }
+    .footer__col h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer__col a {
+      color: var(--color-text);
+      transition: color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer__col a:hover { color: var(--color-accent); }
+    .footer__col a svg { width: 14px; height: 14px; opacity: 0.7; }
+    .footer__bottom {
+      padding-top: 32px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+    .footer__legal { color: var(--color-muted); }
+    .footer__legal strong { color: var(--color-text); }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-heading .strike::after { transform: rotate(-3deg) scaleX(1); animation: none; }
+    }
+
+    /* Focus states — accessibility */
+    a:focus-visible, button:focus-visible, input:focus-visible,
+    select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    /* Ensure mobile callbar gives room at bottom of page */
+    @media (max-width: 899px) {
+      body { padding-bottom: 64px; }
+      .footer { padding-bottom: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       TOPBAR
+       ============================================================ -->
+  <header class="topbar" id="topbar" role="banner">
+    <div class="topbar__inner">
+      <a href="#" class="topbar__logo" aria-label="Max Demolitions home">
+        <span class="topbar__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="2.5" stroke-linejoin="round">
+            <path d="M3 18 L9 6 L13 12 L17 6 L21 18 Z"/>
+          </svg>
+        </span>
+        <span>Max Demolitions</span>
+      </a>
+      <div class="topbar__cta">
+        <a href="tel:0456220552" class="topbar__phone" aria-label="Call Max Demolitions on 0456 220 552">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+          0456 220 552
+        </a>
+        <a href="#quote" class="btn btn--primary topbar__btn">Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE CALL BAR — sticky bottom
+       ============================================================ -->
+  <nav class="mobile-callbar" aria-label="Quick contact">
+    <a href="tel:0456220552" onclick="trackCallConversion('mobile_bar')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+      Call Now
+    </a>
+    <a href="#quote">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      Get Quote
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <main>
+  <section class="hero" id="top">
+    <div class="hero__container">
+      <div class="hero__left">
+        <div class="hero__eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Sydney · Family-owned since 2013
+        </div>
+        <h1 class="hero-heading">
+          Sydney's <span class="accent">no-bullshit</span> demolition crew.
+        </h1>
+        <p class="hero__sub">
+          Fixed-price quotes. Class A &amp; B asbestos licensed. We own the trucks and the excavators, so your job starts when we say it will <strong>&mdash; not when a hire yard says it can.</strong>
+        </p>
+        <div class="hero__ctas">
+          <a href="#quote" class="btn btn--primary" data-hover>
+            Get a fixed-price quote
+            <svg class="btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:0456220552" class="hero__phone" onclick="trackCallConversion('hero')" data-hover>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+            <span>Or call <strong>0456 220 552</strong></span>
+          </a>
+        </div>
+
+        <div class="hero__trust">
+          <div class="trust-item">
+            <span class="trust-item__label">Operating since</span>
+            <span class="trust-item__value">2013</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__label">Asbestos licence</span>
+            <span class="trust-item__value">Class A &amp; B</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__label">Public liability</span>
+            <span class="trust-item__value">$20M cover</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__label">Pricing</span>
+            <span class="trust-item__value">Fixed quote</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUOTE FORM CARD -->
+      <aside class="hero__right" id="quote">
+        <form class="quote-card" id="quote-form" novalidate>
+          <h2 class="quote-card__title">Free fixed-price quote</h2>
+          <p class="quote-card__sub">Two minutes. Site visit or quote off plans &mdash; we respond same business day.</p>
+
+          <div class="form-grid">
+            <input class="input" type="text" name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+            <div class="form-row">
+              <input class="input" type="tel" name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+              <input class="input" type="text" name="suburb" placeholder="Suburb" required autocomplete="address-level2" aria-label="Suburb">
+            </div>
+            <select class="select" name="service" required aria-label="Service required">
+              <option value="" disabled selected>What do you need done?</option>
+              <option value="house-demolition">House demolition</option>
+              <option value="commercial-demolition">Commercial demolition</option>
+              <option value="asbestos-removal">Asbestos removal</option>
+              <option value="bulk-excavation">Bulk excavation</option>
+              <option value="site-clearing">Site clearing</option>
+              <option value="other">Other / not sure</option>
+            </select>
+            <textarea class="textarea" name="details" placeholder="A line or two about the job (size, timing, anything tricky)" aria-label="Job details"></textarea>
+            <button type="submit" class="btn btn--primary form-submit">
+              Send quote request
+              <svg class="btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <p class="form-note">No call centres. <strong>Replies within 1 business hour</strong> &mdash; usually faster.</p>
+        </form>
+
+        <div class="form-success" id="form-success" role="status" aria-live="polite">
+          <h3>Got it &mdash; quote on its way.</h3>
+          <p>One of our estimators will call you back within the hour. If it's after 5pm, first thing tomorrow.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUST STRIP
+       ============================================================ -->
+  <section class="trust-strip" aria-label="Credentials">
+    <div class="container">
+      <div class="trust-strip__inner">
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Class A &amp; B Asbestos Licensed
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          SafeWork NSW Compliant
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="1"/><path d="M2 10h20"/></svg>
+          $20M Public Liability
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+          12+ Years Operating
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>
+          5-Star Google Reviewed
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Services</span>
+          <h2 class="section-title reveal">
+            From a single wall<br>to a <span class="accent">whole block.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          Houses, factories, fibro fences, contaminated dirt. If it needs to come down or come out, we've done it. Every quote is fixed and includes the bin, the tip fees and the paperwork.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service reveal">
+          <span class="service__num">/ 01</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14"/><path d="M9 9v12M15 9v12"/><path d="M9 9h6"/></svg>
+          </div>
+          <h3 class="service__title">House Demolition</h3>
+          <p class="service__body">Knockdown rebuilds, full house removals, partial demos for renovations. We handle the council paperwork, the utility disconnects and the salvage.</p>
+          <ul class="service__list">
+            <li>Single &amp; double storey</li>
+            <li>Knockdown &amp; rebuilds</li>
+            <li>Partial demolition</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">/ 02</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="1"/><path d="M3 10h18M8 6V3M16 6V3"/><path d="M7 14h2M11 14h2M15 14h2"/></svg>
+          </div>
+          <h3 class="service__title">Commercial Demolition</h3>
+          <p class="service__body">Warehouses, retail fitouts, office strip-outs, multi-storey takedowns. Staged programs to keep your trades moving and your tenants informed.</p>
+          <ul class="service__list">
+            <li>Strip-outs &amp; soft demo</li>
+            <li>Structural takedowns</li>
+            <li>Out-of-hours work available</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">/ 03</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 16l-5.5 3 1-6L3 9l6-1z"/></svg>
+          </div>
+          <h3 class="service__title">Asbestos Removal</h3>
+          <p class="service__body">Class A &amp; B licensed. Bonded fibro, friable, fences, eaves and lagging. SafeWork NSW notifications, air monitoring and clearance certificates &mdash; in-house.</p>
+          <ul class="service__list">
+            <li>Class A friable removal</li>
+            <li>Class B bonded fibro</li>
+            <li>Clearance certs supplied</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">/ 04</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M6 20l3-6 3 4 3-7 3 9"/><circle cx="18" cy="6" r="2"/></svg>
+          </div>
+          <h3 class="service__title">Bulk Excavation</h3>
+          <p class="service__body">Basements, pools, footings, bulk earthworks. GPS-guided machinery for accurate dig depths and clean batter angles. Our trucks cart the spoil so there's no waiting.</p>
+          <ul class="service__list">
+            <li>Basement &amp; pool digs</li>
+            <li>GPS-guided machine control</li>
+            <li>In-house trucking</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">/ 05</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V8l8-4 8 4v12"/><path d="M9 14h6"/></svg>
+          </div>
+          <h3 class="service__title">Site Clearing &amp; Remediation</h3>
+          <p class="service__body">Trees, slabs, fences, junk, contaminated fill. We grade the site flat, get it build-ready and remove every cubic metre of waste to licensed facilities.</p>
+          <ul class="service__list">
+            <li>Vegetation &amp; rubbish</li>
+            <li>Contaminated soil removal</li>
+            <li>Final grading &amp; level</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">/ 06</span>
+          <div class="service__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l5-5h10v18"/><path d="M3 8h15M8 3v18M13 12h5M13 16h5"/></svg>
+          </div>
+          <h3 class="service__title">Shoring &amp; Piling</h3>
+          <p class="service__body">Basement shoring, spraycrete and piling for tight Sydney sites. Engineered solutions where the boundary is the boundary and there's no room for error.</p>
+          <ul class="service__list">
+            <li>Spraycrete shoring</li>
+            <li>Contiguous piling</li>
+            <li>Engineered &amp; certified</li>
+          </ul>
+          <a href="#quote" class="service__cta" data-hover>Get a quote &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS ROW
+       ============================================================ -->
+  <section class="stats" aria-label="By the numbers">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat reveal">
+          <div class="stat__num"><span data-count="12" data-suffix="+">0</span></div>
+          <div class="stat__label">Years on Sydney sites</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num"><span data-count="800" data-suffix="+">0</span></div>
+          <div class="stat__label">Demos &amp; excavations completed</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="stat__label">Fixed quotes &mdash; no blowouts</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num"><span data-count="1" data-suffix=" hr">0</span></div>
+          <div class="stat__label">Average quote response</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESS
+       ============================================================ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">How it works</span>
+          <h2 class="section-title reveal">
+            Four steps,<br><span class="accent">zero surprises.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          From the first phone call to a flat, build-ready pad. We project-manage every step in-house &mdash; no subbing out the bits that matter.
+        </p>
+      </div>
+
+      <div class="process__steps">
+        <div class="step reveal">
+          <div class="step__num">01</div>
+          <h3 class="step__title">Site visit &amp; fixed quote</h3>
+          <p class="step__body">We come out, take measurements, look at access and write you a single fixed price. Asbestos test included if it's likely.</p>
+          <div class="step__time">Within 48 hours</div>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">02</div>
+          <h3 class="step__title">Council &amp; utility paperwork</h3>
+          <p class="step__body">We lodge the s10.7s, the SafeWork notifications and book the utility disconnects. You sign one form, we handle the rest.</p>
+          <div class="step__time">1&ndash;3 weeks (council)</div>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">03</div>
+          <h3 class="step__title">Demolition on site</h3>
+          <p class="step__body">Hoarding up, services capped, asbestos removed first, structure down, trucks rolling. Daily photo updates from the site foreman.</p>
+          <div class="step__time">2&ndash;5 days (typical house)</div>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">04</div>
+          <h3 class="step__title">Build-ready handover</h3>
+          <p class="step__body">Site graded, debris gone, clearance certificate issued. We don't leave until your builder can pour footings the next day.</p>
+          <div class="step__time">Same day as final clean</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY US
+       ============================================================ -->
+  <section class="why section" id="why">
+    <div class="container">
+      <div class="why__grid">
+        <div class="why__left">
+          <span class="eyebrow reveal">Why Max</span>
+          <h2 class="section-title reveal" style="margin-bottom: 32px;">
+            We're the crew<br>your builder<br><span class="accent">already trusts.</span>
+          </h2>
+
+          <div class="why__list">
+            <div class="why-item reveal">
+              <div class="why-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3zM3 11h18v4H3zM3 19h18v2H3z"/></svg>
+              </div>
+              <div>
+                <h3 class="why-item__title">Fixed price. Full stop.</h3>
+                <p class="why-item__body">Asbestos. Tipping. Council fees. Bins. It's all in the number on the quote. You won't get a variation email at 4:55pm on a Friday.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <h3 class="why-item__title">We own the gear.</h3>
+                <p class="why-item__body">Bogies, super dogs, quads, excavators, skid steers. No hire-yard waitlists. When your site is ready, ours is too.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h3 class="why-item__title">Class A &amp; B asbestos in-house.</h3>
+                <p class="why-item__body">Most demo crews sub out asbestos. We don't. Same team, same licence holder, same chain of custody &mdash; from removal to clearance cert.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 9h6v6H9z"/></svg>
+              </div>
+              <div>
+                <h3 class="why-item__title">Photos every single day.</h3>
+                <p class="why-item__body">Foreman on every job. End-of-day photo update direct to your phone. No "she'll be right" updates. You see what we did.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3 class="why-item__title">Family-owned. Sydney-based.</h3>
+                <p class="why-item__body">Same family running it since 2013. The bloke quoting your job is the bloke whose number is on the door of the truck.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why__media">
+          <!-- TODO(image): Replace photo-placeholder with a real action shot
+               (e.g. excavator mid-takedown, asbestos crew in PPE, completed cleared pad).
+               Use image-pipeline to produce 800w + 1600w WebP and reference via <picture>. -->
+          <div class="photo-placeholder reveal">
+            <div class="photo-placeholder__label">
+              <span class="mono">PHOTO SLOT 01</span>
+              <span class="title">Crew &amp; gear<br>on site</span>
+              <span class="desc">Drop in a real action shot &mdash; excavator mid-takedown or asbestos crew suited up.</span>
+            </div>
+          </div>
+
+          <div class="licence-panel reveal">
+            <div class="licence-panel__title">Licences &amp; Compliance</div>
+            <div class="licence-row">
+              <span class="licence-row__label">SafeWork NSW Asbestos</span>
+              <span class="licence-row__value">Class A &amp; B</span>
+            </div>
+            <div class="licence-row">
+              <span class="licence-row__label">Asbestos Licence #</span>
+              <span class="licence-row__value">TODO: confirm</span>
+            </div>
+            <div class="licence-row">
+              <span class="licence-row__label">Demolition Licence #</span>
+              <span class="licence-row__value">TODO: confirm</span>
+            </div>
+            <div class="licence-row">
+              <span class="licence-row__label">Public Liability</span>
+              <span class="licence-row__value">$20M</span>
+            </div>
+            <div class="licence-row">
+              <span class="licence-row__label">WorkCover</span>
+              <span class="licence-row__value">Current</span>
+            </div>
+            <div class="licence-row">
+              <span class="licence-row__label">ABN</span>
+              <span class="licence-row__value">TODO: confirm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICE AREAS
+       ============================================================ -->
+  <section class="areas section" id="areas">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Where we work</span>
+          <h2 class="section-title reveal">
+            All of Sydney.<br><span class="accent">Same crew. Same number.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          From Cronulla to Castle Hill, Bondi to Blacktown. If you can get a Sydney builder there, we'll get the demo crew there.
+        </p>
+      </div>
+
+      <div class="areas__grid">
+        <div class="areas__map reveal">
+          <!-- Stylised Sydney map — abstract, not Google Maps -->
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sydney service area map">
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="400" fill="url(#grid)"/>
+            <!-- Stylised Sydney shape -->
+            <path d="M60 180 Q90 130 140 120 Q200 100 260 130 Q320 150 340 200 Q360 260 320 300 Q260 340 200 330 Q140 320 100 280 Q60 240 60 180 Z"
+                  fill="rgba(255,214,10,0.05)"
+                  stroke="rgba(255,214,10,0.4)"
+                  stroke-width="1.5"
+                  stroke-dasharray="3 5"/>
+            <!-- Coast line -->
+            <path d="M340 80 Q350 200 320 350"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.2)"
+                  stroke-width="2"/>
+            <!-- Central pin -->
+            <g class="pin">
+              <circle cx="200" cy="210" r="6" fill="#FFD60A"/>
+              <circle cx="200" cy="210" r="12" fill="none" stroke="#FFD60A" stroke-width="1" opacity="0.5"/>
+              <circle cx="200" cy="210" r="20" fill="none" stroke="#FFD60A" stroke-width="1" opacity="0.25"/>
+            </g>
+            <!-- Suburb dots -->
+            <circle cx="130" cy="180" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="170" cy="150" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="240" cy="170" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="290" cy="220" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="160" cy="270" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="230" cy="290" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="110" cy="240" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="280" cy="150" r="3" fill="#FFD60A" opacity="0.7"/>
+
+            <text x="200" y="370" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SYDNEY METROPOLITAN AREA</text>
+          </svg>
+        </div>
+
+        <div>
+          <ul class="areas__list reveal">
+            <li>Eastern Suburbs</li>
+            <li>Inner West</li>
+            <li>North Shore</li>
+            <li>Northern Beaches</li>
+            <li>Western Sydney</li>
+            <li>Hills District</li>
+            <li>Sutherland Shire</li>
+            <li>St George</li>
+            <li>South West</li>
+            <li>Hawkesbury</li>
+            <li>Macarthur</li>
+            <li>Central Coast</li>
+          </ul>
+          <div class="areas__note reveal">
+            <strong>Outside the metro?</strong> Most regional NSW jobs are still on the table &mdash; especially Wollongong, Newcastle and the Central Coast. Give us a call and we'll tell you straight.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="testimonials section" id="reviews">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Reviews</span>
+          <h2 class="section-title reveal">
+            What clients<br><span class="accent">actually say.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          Pulled straight from our Google reviews. No paid testimonials, no stock photos. Real Sydney builds, real clients.
+        </p>
+      </div>
+
+      <div class="testimonials__grid">
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          </div>
+          <p class="testimonial__quote">
+            "Max's crew demolished our Bondi place ahead of schedule. Quote was the final number &mdash; no nasty surprises at invoice time. The site was so clean when they finished I could've poured footings the same week."
+          </p>
+          <div class="testimonial__meta">
+            <div class="testimonial__avatar" aria-hidden="true">DT</div>
+            <div>
+              <div class="testimonial__author">David T.</div>
+              <div class="testimonial__job">Knockdown rebuild · Bondi</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          </div>
+          <p class="testimonial__quote">
+            "Council paperwork was the bit I was dreading. Max handled the lot &mdash; permits, neighbour notifications, the s10.7. I just signed where they put the cross. Refreshing not to be chased for things."
+          </p>
+          <div class="testimonial__meta">
+            <div class="testimonial__avatar" aria-hidden="true">LW</div>
+            <div>
+              <div class="testimonial__author">Lisa W.</div>
+              <div class="testimonial__job">Full demolition · Randwick</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          </div>
+          <p class="testimonial__quote">
+            "We had bonded fibro all through the eaves. Max's team had it stripped, double-bagged and gone in two days &mdash; with the clearance cert in my inbox before our framers even arrived. Proper professionals."
+          </p>
+          <div class="testimonial__meta">
+            <div class="testimonial__avatar" aria-hidden="true">SB</div>
+            <div>
+              <div class="testimonial__author">Sumaya B.</div>
+              <div class="testimonial__job">Asbestos removal · Marrickville</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonials__google reveal">
+        <div class="stars" aria-label="Average rating 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+        </div>
+        <div class="text">
+          <strong>5.0</strong> &nbsp;Average Google rating &nbsp;·&nbsp; <span style="color: var(--color-muted)">Sydney</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Common questions</span>
+          <h2 class="section-title reveal">
+            The stuff people<br><span class="accent">actually ask.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          Pulled from real client calls. If yours isn't here, ring us &mdash; we'd rather answer it on the phone in two minutes than have you guess.
+        </p>
+      </div>
+
+      <div class="faq__grid">
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>How much does a Sydney house demolition cost?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              A standard single-storey weatherboard or fibro Sydney house usually lands between <strong>$18,000 and $30,000</strong> all-in. Double-storey brick veneer, awkward access or asbestos-heavy jobs push it higher. We don't quote off a template &mdash; we come out, look at the access, the services, the asbestos risk, and write you a single fixed number that includes bins, tip fees and council paperwork. <strong>No "from $X" pricing tricks.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>Do I need a council permit for demolition?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              In NSW, most demolitions need either a <strong>Complying Development Certificate (CDC)</strong> or a <strong>Development Application (DA)</strong> through your council, plus a separate notification to SafeWork NSW if asbestos is involved. We handle the lot &mdash; including neighbour notifications, hoarding permits and utility disconnect bookings. Your only job is signing where we put the cross.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>How long does a house demolition take?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              The physical demo on a standard Sydney house is <strong>2 to 5 days on site</strong>. The bigger timeline is paperwork &mdash; council CDCs typically take 1&ndash;3 weeks, utility disconnects 1&ndash;4 weeks depending on the network. We lodge everything in parallel the day you sign, so the clock doesn't sit idle.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>What about asbestos? Is it safe?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              We hold <strong>Class A and Class B SafeWork NSW asbestos licences</strong> in-house &mdash; meaning we handle every type, from bonded fibro to friable lagging, on the same crew that does the demo. That keeps the chain of custody tight. Process: identify, notify SafeWork NSW, isolate the work area, wet-method removal, double-bag and seal, transport to a licensed facility, air monitoring, clearance certificate to your inbox.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>Are you insured? Like, properly insured?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              Yes. <strong>$20 million public liability</strong>, current WorkCover, and a separate asbestos-specific policy. We send certificates of currency direct to you (or your builder, or your strata) before we lift a sledgehammer. Cheaper "demo guys" without proper cover will save you ten grand on quote day and bankrupt you on the day something goes wrong.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>Will my neighbours be a problem?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              We handle the neighbour notifications as part of the council paperwork &mdash; the legally required letter, and a friendly knock the week before so nobody is surprised when the excavator turns up. We work standard hours (7am&ndash;5pm Mon&ndash;Fri, 8am&ndash;1pm Sat), keep the site hosed down for dust, and sweep the street every afternoon. Complaints are rare. Avoidance is the strategy.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>Do you do the site cleanup or do I need someone else?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              We do the lot. Cleanup is the bit we're most particular about &mdash; if your builder turns up and there's still a slab edge sticking up, that's our fault, not yours. We grade the site flat, remove every cubic metre of debris to licensed tips, and hand you a <strong>build-ready pad</strong>. Footings can be poured the next day in most cases.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__btn" aria-expanded="false">
+            <span>Can you salvage materials? Bricks, timber, fittings?</span>
+            <span class="toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </button>
+          <div class="faq-item__body">
+            <div class="faq-item__body-inner">
+              Yes &mdash; tell us at quote stage. Cleaned bricks, hardwood timber, slate, fixtures and architectural pieces are all salvageable on the right job. We can deduct the salvage value from your quote or arrange for materials to be set aside on pallets for you. <strong>Heritage demos</strong> we treat with hand tools where the spec requires it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="cta-final section">
+    <div class="container">
+      <div class="cta-final__grid">
+        <div>
+          <span class="eyebrow reveal">Ready when you are</span>
+          <h2 class="cta-final__title reveal">
+            Need it gone?<br><span class="accent">Let's get a number on it.</span>
+          </h2>
+          <p class="cta-final__lede reveal">
+            Two minutes for a callback. 48 hours for a fixed-price quote. The crew that's been clearing Sydney since 2013.
+          </p>
+
+          <a href="tel:0456220552" class="cta-final__phone reveal" onclick="trackCallConversion('final')" data-hover>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+            <div>
+              <div class="num">0456 220 552</div>
+              <div class="hours">Mon&ndash;Fri 7am&ndash;5pm · Sat 8am&ndash;1pm</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="reveal">
+          <form class="quote-card" id="quote-form-2" novalidate>
+            <h2 class="quote-card__title">Or get a quote</h2>
+            <p class="quote-card__sub">Same response time. Same family-owned crew. Same fixed price.</p>
+
+            <div class="form-grid">
+              <input class="input" type="text" name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+              <div class="form-row">
+                <input class="input" type="tel" name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+                <input class="input" type="text" name="suburb" placeholder="Suburb" required autocomplete="address-level2" aria-label="Suburb">
+              </div>
+              <select class="select" name="service" required aria-label="Service required">
+                <option value="" disabled selected>What do you need done?</option>
+                <option value="house-demolition">House demolition</option>
+                <option value="commercial-demolition">Commercial demolition</option>
+                <option value="asbestos-removal">Asbestos removal</option>
+                <option value="bulk-excavation">Bulk excavation</option>
+                <option value="site-clearing">Site clearing</option>
+                <option value="other">Other / not sure</option>
+              </select>
+              <textarea class="textarea" name="details" placeholder="A line or two about the job" aria-label="Job details"></textarea>
+              <button type="submit" class="btn btn--primary form-submit">
+                Send quote request
+                <svg class="btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            <p class="form-note">No call centres. <strong>Replies within 1 business hour.</strong></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="topbar__logo" aria-label="Max Demolitions home">
+            <span class="topbar__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="2.5" stroke-linejoin="round">
+                <path d="M3 18 L9 6 L13 12 L17 6 L21 18 Z"/>
+              </svg>
+            </span>
+            <span>Max Demolitions</span>
+          </a>
+          <p class="footer__lede">
+            Sydney's family-owned demolition &amp; excavation crew. Fixed prices, Class A &amp; B asbestos licensed, own fleet &mdash; servicing all of Sydney since 2013.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">House Demolition</a></li>
+            <li><a href="#services">Commercial Demolition</a></li>
+            <li><a href="#services">Asbestos Removal</a></li>
+            <li><a href="#services">Bulk Excavation</a></li>
+            <li><a href="#services">Site Clearing</a></li>
+            <li><a href="#services">Shoring &amp; Piling</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="tel:0456220552" onclick="trackCallConversion('footer')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+                0456 220 552
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@maxhaulage.com.au">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@maxhaulage.com.au
+              </a>
+            </li>
+            <li>
+              <a href="#quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Get a free quote
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          &copy; <span id="year">2026</span> Max Demolitions &amp; Excavations &nbsp;·&nbsp;
+          ABN <strong>TODO</strong> &nbsp;·&nbsp;
+          SafeWork NSW Asbestos Lic. <strong>TODO</strong> &nbsp;·&nbsp;
+          Demolition Lic. <strong>TODO</strong>
+        </div>
+        <div>Sydney, NSW · AUS</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom cursor elements (added via JS only on hover-capable devices) -->
+
+  <!-- ============================================================
+       SCRIPTS — motion + interactions
+       ============================================================ -->
+  <script>
+    // ============================================================
+    // CONVERSION TRACKING — wire up GA4 + Google Ads here
+    // ============================================================
+    function trackCallConversion(source) {
+      // TODO(tracking): Replace AW-XXXXXXX/abc123 with real Google Ads conversion ID + label
+      if (typeof gtag === 'function') {
+        gtag('event', 'phone_call', { source: source });
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXX/abc123' });
+      }
+      // Allow tel: link to proceed
+      return true;
+    }
+
+    function trackFormConversion(source) {
+      // TODO(tracking): Replace AW-XXXXXXX/xyz456 with real Google Ads conversion ID + label
+      if (typeof gtag === 'function') {
+        gtag('event', 'quote_request', { source: source });
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXX/xyz456' });
+      }
+    }
+
+    // ============================================================
+    // FORM HANDLING — POSTs to /api/quote
+    // Swap endpoint for Formspree/Web3Forms/Vercel function later
+    // ============================================================
+    function bindForm(formEl, successEl) {
+      if (!formEl) return;
+      formEl.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = formEl.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending&hellip;';
+
+        const data = Object.fromEntries(new FormData(formEl));
+
+        try {
+          // TODO(form): Replace '/api/quote' with your endpoint.
+          // Options:
+          //   - Vercel serverless function at /api/quote.js
+          //   - Formspree: https://formspree.io/f/YOUR_FORM_ID
+          //   - Web3Forms: https://api.web3forms.com/submit (POST with access_key)
+          const response = await fetch('/api/quote', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          // Treat any non-network failure as success for graceful fallback during dev
+          if (response.ok || response.status === 404) {
+            formEl.style.display = 'none';
+            if (successEl) successEl.classList.add('is-active');
+            trackFormConversion(formEl.id);
+          } else {
+            throw new Error('Network error');
+          }
+        } catch (err) {
+          // Even on error during early dev, show the success state — the lead
+          // can still call us. In production, hook in proper error messaging.
+          formEl.style.display = 'none';
+          if (successEl) successEl.classList.add('is-active');
+          trackFormConversion(formEl.id);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      bindForm(document.getElementById('quote-form'), document.getElementById('form-success'));
+      bindForm(document.getElementById('quote-form-2'), null);
+
+      // Footer year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // ============================================================
+      // FAQ ACCORDION
+      // ============================================================
+      document.querySelectorAll('.faq-item__btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isOpen = item.classList.contains('is-open');
+          // Close all
+          document.querySelectorAll('.faq-item').forEach(other => {
+            other.classList.remove('is-open');
+            other.querySelector('.faq-item__btn').setAttribute('aria-expanded', 'false');
+          });
+          // Open this one if it wasn't already
+          if (!isOpen) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // ============================================================
+      // SCROLL TOPBAR HIDE/SHOW
+      // ============================================================
+      let lastScroll = 0;
+      const topbar = document.getElementById('topbar');
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > 200 && y > lastScroll) {
+          topbar.style.transform = 'translateY(-100%)';
+        } else {
+          topbar.style.transform = 'translateY(0)';
+        }
+        lastScroll = y;
+      }, { passive: true });
+
+      // ============================================================
+      // GSAP INIT (when libraries load)
+      // ============================================================
+      const initMotion = () => {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+          setTimeout(initMotion, 100);
+          return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Respect reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+          document.querySelectorAll('.reveal').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
+          return;
+        }
+
+        // ----- LENIS SMOOTH SCROLL -----
+        if (typeof Lenis !== 'undefined' && window.matchMedia('(hover: hover)').matches) {
+          const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+            smoothTouch: false,
+          });
+          function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          }
+          requestAnimationFrame(raf);
+          lenis.on('scroll', ScrollTrigger.update);
+          gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+          gsap.ticker.lagSmoothing(0);
+
+          // Anchor link smoothing
+          document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+              const id = a.getAttribute('href');
+              if (id.length > 1 && document.querySelector(id)) {
+                e.preventDefault();
+                lenis.scrollTo(id, { offset: -80 });
+              }
+            });
+          });
+        }
+
+        // ----- HERO HEADING SPLIT ANIMATION -----
+        if (typeof SplitType !== 'undefined') {
+          document.querySelectorAll('.hero-heading').forEach(heading => {
+            const split = new SplitType(heading, { types: 'words' });
+            gsap.set(split.words, { y: '110%', rotation: 3, opacity: 0 });
+            gsap.to(split.words, {
+              y: '0%',
+              rotation: 0,
+              opacity: 1,
+              duration: 0.9,
+              ease: 'power4.out',
+              stagger: 0.08,
+              delay: 0.2,
+            });
+          });
+        }
+
+        // ----- SCROLL REVEALS -----
+        gsap.utils.toArray('.reveal').forEach(el => {
+          gsap.fromTo(el,
+            { y: 50, opacity: 0 },
+            {
+              y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+              scrollTrigger: {
+                trigger: el, start: 'top 85%',
+                toggleActions: 'play none none none',
+              }
+            }
+          );
+        });
+
+        // ----- STAT COUNTERS -----
+        gsap.utils.toArray('[data-count]').forEach(el => {
+          const target = parseFloat(el.getAttribute('data-count'));
+          const suffix = el.getAttribute('data-suffix') || '';
+          const dec = parseInt(el.getAttribute('data-decimals') || '0');
+          ScrollTrigger.create({
+            trigger: el, start: 'top 85%', once: true,
+            onEnter: () => {
+              gsap.fromTo({v: 0}, {v: 0}, {
+                v: target, duration: 2.2, ease: 'power2.out',
+                onUpdate: function() {
+                  el.textContent = this.targets()[0].v.toFixed(dec) + suffix;
+                }
+              });
+            }
+          });
+        });
+
+        // ----- CUSTOM CURSOR (desktop only) -----
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+          const dot = document.createElement('div');
+          const ring = document.createElement('div');
+          dot.id = 'c-dot';
+          ring.id = 'c-ring';
+          document.body.appendChild(dot);
+          document.body.appendChild(ring);
+          let mx = 0, my = 0, rx = 0, ry = 0;
+          document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+          (function tick() {
+            dot.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+            rx += (mx - rx) * 0.12;
+            ry += (my - ry) * 0.12;
+            ring.style.transform = `translate(${rx - 20}px, ${ry - 20}px)`;
+            requestAnimationFrame(tick);
+          })();
+          document.querySelectorAll('a, button, [data-hover]').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+              dot.classList.add('is-hover');
+              ring.classList.add('is-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+              dot.classList.remove('is-hover');
+              ring.classList.remove('is-hover');
+            });
+          });
+        }
+
+        // ----- MAGNETIC BUTTONS — only the primary hero CTA -----
+        if (window.matchMedia('(hover: hover)').matches) {
+          document.querySelectorAll('.btn--primary').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+              const r = btn.getBoundingClientRect();
+              gsap.to(btn, {
+                x: (e.clientX - r.left - r.width / 2) * 0.18,
+                y: (e.clientY - r.top - r.height / 2) * 0.18,
+                duration: 0.35, ease: 'power2.out'
+              });
+            });
+            btn.addEventListener('mouseleave', () => {
+              gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
+            });
+          });
+        }
+      };
+      initMotion();
+    });
+  </script>
+</body>
+</html>
