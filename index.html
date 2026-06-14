@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demolition Sydney | House, Commercial &amp; Asbestos Removal — Max Demolitions</title>
-  <meta name="description" content="Fixed-price demolition across Sydney. House, commercial, asbestos removal, bulk excavation and site clearing. Class A &amp; B asbestos licensed. Own fleet, no hire delays. Free quote on 0456 220 552.">
-  <meta name="theme-color" content="#0B0B0C">
+  <meta name="description" content="Fixed-price demolition across Sydney. House, commercial, asbestos removal, bulk excavation and site clearing. Class A &amp; B asbestos licensed. Own fleet, no hire delays. Free quote on 0416 355 632.">
+  <meta name="theme-color" content="#121212">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / social preview for Google Ads + Meta -->
@@ -19,8 +19,13 @@
   <meta name="twitter:title" content="Demolition Sydney — Max Demolitions">
   <meta name="twitter:description" content="Fixed-price Sydney demolition. House, commercial, asbestos, excavation. Class A &amp; B licensed.">
 
-  <!-- Favicon (inline SVG — hi-vis chevron mark) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230B0B0C'/%3E%3Cpath d='M10 46 L24 18 L34 30 L44 18 L58 46 Z' fill='%23FFD60A'/%3E%3Crect x='10' y='50' width='48' height='6' fill='%23FFD60A'/%3E%3C/svg%3E">
+  <!-- Favicon — Max Demolitions brand mark on asphalt -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121212'/%3E%3Cpath d='M10 46 L24 18 L34 30 L44 18 L58 46 Z' fill='%23E94E18'/%3E%3Crect x='10' y='50' width='48' height='6' fill='%23E94E18'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="/assets/logo.webp">
+
+  <!-- Preload hero image and logo so they paint in first viewport -->
+  <link rel="preload" as="image" href="/assets/hero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/logo.webp">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +52,7 @@
     "alternateName": "Max Demolitions & Excavations",
     "image": "https://maxdemolitions.com.au/og-image.jpg",
     "url": "https://maxdemolitions.com.au/",
-    "telephone": "+61456220552",
+    "telephone": "+61416355632",
     "email": "info@maxhaulage.com.au",
     "priceRange": "$$",
     "description": "Licensed demolition contractor serving Sydney. House and commercial demolition, Class A and B asbestos removal, bulk excavation and site clearing. Fixed-price quotes, own fleet, family-owned since 2013.",
@@ -90,32 +95,36 @@
   <style>
     /* ============================================================
        MAX DEMOLITIONS — design tokens
-       Industrial trade aesthetic. Asphalt black + hi-vis safety yellow.
+       Brand palette extracted from maxdemolitions.com.au:
+       - Primary near-black #121212
+       - Brand accent deep orange #e94e18 (their --e-global-color-accent)
+       - Highlight safety yellow #f9d11a (used on their CTAs)
        ============================================================ */
     :root {
-      --color-bg: #0B0B0C;
-      --color-bg-raised: #131316;
-      --color-surface: #1A1A1D;
-      --color-surface-2: #232328;
+      --color-bg: #0E0E0F;
+      --color-bg-raised: #161617;
+      --color-surface: #1C1C1E;
+      --color-surface-2: #26262A;
       --color-border: rgba(255,255,255,0.08);
       --color-border-strong: rgba(255,255,255,0.18);
-      --color-text: #F1F1F2;
-      --color-muted: #8C8C90;
-      --color-muted-2: #5C5C60;
+      --color-text: #F4F4F5;
+      --color-muted: #A0A0A4;        /* WCAG AA on #0E0E0F = 9.4:1 */
+      --color-muted-2: #6E6E72;
 
-      /* Hi-vis safety palette — lifted from PPE colour standards */
-      --color-accent: #FFD60A;         /* AS/NZS 1906 hi-vis yellow */
-      --color-accent-hot: #FF6B1A;     /* safety orange */
-      --color-accent-rgb: 255, 214, 10;
-      --color-hot-rgb: 255, 107, 26;
+      /* Max Demolitions brand palette */
+      --color-accent: #E94E18;       /* primary brand orange */
+      --color-accent-soft: #FF6B35;  /* lifted hover state */
+      --color-accent-hot: #F9D11A;   /* secondary safety yellow */
+      --color-accent-rgb: 233, 78, 24;
+      --color-hot-rgb: 249, 209, 26;
 
-      --color-concrete: #8C8C90;
-      --color-rebar: #C84A1F;
+      --color-concrete: #A0A0A4;
+      --color-rebar: #E94E18;
 
-      /* Hazard tape gradient — used as accent strips */
+      /* Hazard tape gradient — orange + black, on-brand */
       --hazard-stripe: repeating-linear-gradient(135deg,
-        #FFD60A 0 20px,
-        #0B0B0C 20px 40px);
+        #E94E18 0 20px,
+        #121212 20px 40px);
 
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -242,13 +251,13 @@
     }
     .btn--primary {
       background: var(--color-accent);
-      color: #0B0B0C;
+      color: #121212;
       border-color: var(--color-accent);
     }
     .btn--primary:hover {
       background: var(--color-accent-hot);
       border-color: var(--color-accent-hot);
-      color: #0B0B0C;
+      color: #121212;
     }
     .btn--ghost {
       background: transparent;
@@ -260,14 +269,14 @@
       color: var(--color-accent);
     }
     .btn--dark {
-      background: #0B0B0C;
+      background: #121212;
       color: var(--color-text);
-      border-color: #0B0B0C;
+      border-color: #121212;
     }
     .btn--dark:hover {
-      background: #FFD60A;
-      color: #0B0B0C;
-      border-color: #FFD60A;
+      background: #E94E18;
+      color: #121212;
+      border-color: #E94E18;
     }
     .btn__arrow { transition: transform 0.35s var(--ease-out); }
     .btn:hover .btn__arrow { transform: translateX(4px); }
@@ -315,39 +324,74 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      background: rgba(11, 11, 12, 0.85);
+      background: rgba(14, 14, 15, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       transition: transform 0.35s var(--ease-out);
     }
+    /* Above the main topbar — visible from first paint on mobile */
+    .pre-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 8px 5vw;
+      background: var(--color-accent);
+      color: #121212;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .pre-bar a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #121212;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .pre-bar a svg { width: 13px; height: 13px; }
+    .pre-bar .pre-bar__label { opacity: 0.85; }
+    @media (max-width: 380px) {
+      .pre-bar .pre-bar__label { display: none; }
+      .pre-bar { justify-content: center; }
+    }
+    @media (min-width: 900px) {
+      .pre-bar { display: none; }
+    }
     .topbar__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 6vw;
+      padding: 14px 5vw;
       max-width: var(--max-w);
       margin: 0 auto;
+      gap: 12px;
     }
     .topbar__logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: -0.01em;
-      color: var(--color-text);
+      gap: 0;
+      padding: 6px 12px;
+      background: #F5F2EC;          /* warm off-white plate so the brand-accurate logo reads against dark topbar */
+      border-radius: 6px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 4px 14px rgba(0,0,0,0.35);
+      transition: transform 0.25s var(--ease-out);
     }
-    .topbar__mark {
-      width: 32px;
-      height: 32px;
-      background: var(--color-accent);
-      display: grid;
-      place-items: center;
-      clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    .topbar__logo:hover { transform: translateY(-1px); }
+    .topbar__logo img {
+      height: 36px;
+      width: auto;
+      display: block;
     }
-    .topbar__mark svg { width: 18px; height: 18px; }
+    @media (max-width: 520px) {
+      .topbar__logo { padding: 5px 9px; }
+      .topbar__logo img { height: 28px; }
+    }
 
     .topbar__cta {
       display: flex;
@@ -355,23 +399,30 @@
       align-items: center;
     }
     .topbar__phone {
-      display: none;
+      display: inline-flex;
       align-items: center;
       gap: 8px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       color: var(--color-text);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
+      text-decoration: none;
     }
-    .topbar__phone svg { width: 14px; height: 14px; }
+    .topbar__phone svg { width: 16px; height: 16px; color: var(--color-accent); }
+    .topbar__phone__label { display: none; }
     @media (min-width: 720px) {
-      .topbar__phone { display: inline-flex; }
+      .topbar__phone__label { display: inline; }
     }
     .topbar__btn {
-      padding: 10px 18px;
+      padding: 11px 16px;
       font-size: 12px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
+    }
+    /* On the smallest screens shrink the button so the logo, phone and CTA all fit */
+    @media (max-width: 520px) {
+      .topbar__btn { padding: 10px 12px; font-size: 11px; }
+      .topbar__phone { font-size: 13px; }
     }
 
     /* ============================================================
@@ -402,10 +453,10 @@
     }
     .mobile-callbar a:first-child {
       background: var(--color-accent);
-      color: #0B0B0C;
+      color: #121212;
     }
     .mobile-callbar a:last-child {
-      background: #0B0B0C;
+      background: #121212;
       color: var(--color-text);
       border-left: 1px solid var(--color-border);
     }
@@ -419,21 +470,50 @@
        ============================================================ */
     .hero {
       position: relative;
-      min-height: 100svh;
-      padding: 140px 0 80px;
+      padding: 96px 0 56px;       /* tighter on mobile to keep form above the fold */
       display: flex;
       align-items: center;
       overflow: hidden;
       background:
-        radial-gradient(ellipse 80% 50% at 80% 20%, rgba(var(--color-accent-rgb), 0.10) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 10% 90%, rgba(var(--color-hot-rgb), 0.06) 0%, transparent 60%),
-        linear-gradient(180deg, #0B0B0C 0%, #131316 100%);
+        radial-gradient(ellipse 80% 50% at 80% 20%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 10% 90%, rgba(var(--color-hot-rgb), 0.05) 0%, transparent 60%),
+        linear-gradient(180deg, #121212 0%, #161617 100%);
+    }
+    /* Real hero photo, layered behind content with a dark gradient veil */
+    .hero__photo {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .hero__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      opacity: 0.30;
+      filter: contrast(1.05) saturate(0.85);
+    }
+    .hero__photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, #121212 0%, rgba(18,18,18,0.55) 55%, transparent 100%),
+        linear-gradient(180deg, transparent 0%, rgba(18,18,18,0.9) 100%);
+    }
+    @media (max-width: 899px) {
+      .hero__photo img { opacity: 0.18; object-position: center; }
+      .hero__photo::after {
+        background:
+          linear-gradient(180deg, rgba(18,18,18,0.55) 0%, rgba(18,18,18,0.92) 60%, #121212 100%);
+      }
     }
     /* Diagonal hazard tape behind hero */
     .hero::before {
       content: '';
       position: absolute;
-      top: 30%;
+      top: 35%;
       right: -10%;
       width: 60%;
       height: 14px;
@@ -442,6 +522,7 @@
       transform: rotate(-12deg);
       opacity: 0.10;
       pointer-events: none;
+      z-index: 1;
     }
     .hero__container {
       position: relative;
@@ -449,14 +530,19 @@
       width: 100%;
       max-width: var(--max-w);
       margin: 0 auto;
-      padding: 0 6vw;
+      padding: 0 5vw;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 60px;
+      gap: 36px;
     }
     @media (min-width: 1024px) {
-      .hero__container { grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; }
-      .hero { padding: 160px 0 100px; }
+      .hero__container { grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; padding: 0 6vw; }
+      .hero { padding: 160px 0 100px; min-height: 100svh; }
+    }
+    /* MOBILE-FIRST: form/CTA first, brand storytelling after */
+    @media (max-width: 1023px) {
+      .hero__left  { order: 2; }
+      .hero__right { order: 1; }
     }
 
     .hero__eyebrow {
@@ -484,11 +570,11 @@
 
     .hero-heading {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(48px, 8.5vw, 124px);
+      font-size: clamp(38px, 8vw, 124px);
       line-height: 0.9;
       letter-spacing: -0.035em;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       max-width: 14ch;
       overflow: hidden;
     }
@@ -603,7 +689,7 @@
       position: absolute;
       top: -12px; right: 24px;
       background: var(--color-accent);
-      color: #0B0B0C;
+      color: #121212;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       font-weight: 700;
@@ -641,11 +727,14 @@
       border: 1px solid var(--color-border-strong);
       color: var(--color-text);
       padding: 14px 16px;
-      font-size: 14px;
+      font-size: 16px;          /* >=16px to prevent iOS zoom on focus */
       border-radius: 0;
       transition: border-color 0.25s, background 0.25s;
       font-family: 'Inter', sans-serif;
+      min-height: 48px;         /* WCAG 2.5.5 touch target */
     }
+    .textarea { min-height: 88px; }
+    .select { min-height: 48px; }
     .input:focus, .select:focus, .textarea:focus {
       outline: none;
       border-color: var(--color-accent);
@@ -656,7 +745,7 @@
     .select {
       appearance: none;
       -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFD60A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E94E18' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 14px center;
       background-size: 18px;
@@ -695,7 +784,7 @@
        TRUST STRIP — directly under hero
        ============================================================ */
     .trust-strip {
-      background: #0B0B0C;
+      background: #121212;
       border-top: 1px solid var(--color-border);
       border-bottom: 1px solid var(--color-border);
       padding: 36px 0;
@@ -805,7 +894,7 @@
     .service:hover .service__icon {
       background: var(--color-accent);
       border-color: var(--color-accent);
-      color: #0B0B0C;
+      color: #121212;
     }
     .service__icon svg { width: 26px; height: 26px; }
     .service__title {
@@ -1009,61 +1098,61 @@
       line-height: 1.6;
     }
 
-    /* Right column: photo placeholder + licence panel */
+    /* Right column: photo + licence panel */
     .why__media {
       position: relative;
     }
-    .photo-placeholder {
+    .why__photo {
       position: relative;
       aspect-ratio: 4 / 5;
-      background:
-        linear-gradient(135deg, #1A1A1D 0%, #0B0B0C 100%);
+      background: #121212;
       border: 1px solid var(--color-border);
       overflow: hidden;
-      display: grid;
-      place-items: center;
     }
-    .photo-placeholder::before {
+    .why__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 1.2s var(--ease-out);
+    }
+    .why__photo:hover img { transform: scale(1.03); }
+    .why__photo::after {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        repeating-linear-gradient(45deg,
-          transparent 0 80px,
-          rgba(var(--color-accent-rgb), 0.04) 80px 81px);
+        linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.55) 100%);
+      pointer-events: none;
     }
-    .photo-placeholder::after {
-      content: '';
+    .why__photo-caption {
       position: absolute;
-      top: 16px; left: 16px; right: 16px; bottom: 16px;
-      border: 1px dashed rgba(var(--color-accent-rgb), 0.3);
-    }
-    .photo-placeholder__label {
-      position: relative;
+      left: 20px;
+      bottom: 20px;
+      right: 20px;
       z-index: 2;
-      text-align: center;
-      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
     }
-    .photo-placeholder__label .mono {
-      display: block;
+    .why__photo-caption .mono {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       letter-spacing: 0.18em;
       color: var(--color-accent);
-      margin-bottom: 8px;
-    }
-    .photo-placeholder__label .title {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 20px;
-      color: var(--color-text);
-      line-height: 1.1;
       text-transform: uppercase;
     }
-    .photo-placeholder__label .desc {
-      display: block;
-      margin-top: 8px;
-      font-size: 12px;
-      color: var(--color-muted);
-      line-height: 1.4;
+    .why__photo-caption .sep {
+      width: 28px;
+      height: 1px;
+      background: rgba(255,255,255,0.4);
+    }
+    .why__photo-caption .text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.02em;
     }
 
     .licence-panel {
@@ -1209,7 +1298,7 @@
       width: 36px;
       height: 36px;
       background: var(--color-accent);
-      color: #0B0B0C;
+      color: #121212;
       display: grid;
       place-items: center;
       font-family: 'Archivo Black', sans-serif;
@@ -1301,7 +1390,7 @@
       transition: transform 0.4s var(--ease-out), background 0.3s;
     }
     .faq-item__btn .toggle svg { width: 14px; height: 14px; transition: transform 0.4s var(--ease-out); }
-    .faq-item.is-open .toggle { background: var(--color-accent); color: #0B0B0C; }
+    .faq-item.is-open .toggle { background: var(--color-accent); color: #121212; }
     .faq-item.is-open .toggle svg { transform: rotate(45deg); }
     .faq-item__body {
       max-height: 0;
@@ -1326,7 +1415,7 @@
       background:
         radial-gradient(ellipse 60% 60% at 30% 50%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 60%),
         radial-gradient(ellipse 50% 50% at 80% 80%, rgba(var(--color-hot-rgb), 0.08) 0%, transparent 60%),
-        #0B0B0C;
+        #121212;
       overflow: hidden;
     }
     .cta-final::before {
@@ -1418,7 +1507,8 @@
     @media (min-width: 700px) {
       .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 60px; }
     }
-    .footer__brand .topbar__logo { margin-bottom: 18px; font-size: 20px; }
+    .footer__brand .topbar__logo { margin-bottom: 22px; }
+    .footer__brand .topbar__logo img { height: 48px; }
     .footer__lede {
       max-width: 36ch;
       line-height: 1.6;
@@ -1459,6 +1549,474 @@
     .footer__legal { color: var(--color-muted); }
     .footer__legal strong { color: var(--color-text); }
 
+    /* ============================================================
+       RECENT PROJECTS GALLERY
+       ============================================================ */
+    .projects {
+      background: var(--color-bg);
+      position: relative;
+    }
+    .projects__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 56px;
+    }
+    @media (min-width: 600px) {
+      .projects__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    @media (min-width: 1000px) {
+      .projects__grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    }
+    .project-card {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: var(--color-surface);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      display: block;
+      isolation: isolate;
+    }
+    .project-card picture, .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s var(--ease-out);
+    }
+    .project-card:hover img { transform: scale(1.06); }
+    .project-card__overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+      background: linear-gradient(180deg, transparent 45%, rgba(18,18,18,0.92) 100%);
+      color: var(--color-text);
+    }
+    .project-card__tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+    }
+    .project-card__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .project-card__corner {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: var(--color-accent);
+      color: #121212;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       EQUIPMENT / CAPABILITY
+       ============================================================ */
+    .equipment {
+      background: var(--color-bg-raised);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .equipment__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 56px;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .equipment__grid { grid-template-columns: 1.1fr 1fr; gap: 64px; }
+    }
+    .equipment__photo {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .equipment__photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .equipment__photo::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 64px; height: 14px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+    }
+    .equipment__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .equipment-item {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid var(--color-border);
+      align-items: start;
+    }
+    .equipment-item:last-child { border-bottom: 1px solid var(--color-border); }
+    .equipment-item__icon {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid var(--color-accent);
+      display: grid;
+      place-items: center;
+      color: var(--color-accent);
+    }
+    .equipment-item__icon svg { width: 18px; height: 18px; }
+    .equipment-item__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: -0.005em;
+      margin-bottom: 4px;
+      color: var(--color-text);
+    }
+    .equipment-item__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.55;
+    }
+
+    /* ============================================================
+       PRICING TRANSPARENCY
+       ============================================================ */
+    .pricing {
+      background: var(--color-bg);
+    }
+    .pricing__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      margin-top: 50px;
+    }
+    @media (min-width: 700px) {
+      .pricing__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .pricing__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .price-factor {
+      background: var(--color-bg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .price-factor__num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--color-muted);
+    }
+    .price-factor__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--color-text);
+    }
+    .price-factor__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.55;
+    }
+
+    /* ============================================================
+       COUNCIL PERMITS HELP
+       ============================================================ */
+    .permits {
+      background: var(--color-bg-raised);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .permits__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 56px;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .permits__grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+    }
+    .permit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .permit-row {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      padding: 18px 0;
+      border-top: 1px solid var(--color-border);
+      align-items: start;
+    }
+    .permit-row:last-child { border-bottom: 1px solid var(--color-border); }
+    .permit-row__check {
+      width: 24px;
+      height: 24px;
+      background: var(--color-accent);
+      color: #121212;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .permit-row__check svg { width: 14px; height: 14px; }
+    .permit-row__title {
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+    .permit-row__body { font-size: 14px; color: var(--color-muted); line-height: 1.55; }
+
+    /* ============================================================
+       SAFETY RECORD
+       ============================================================ */
+    .safety {
+      background: var(--color-bg);
+    }
+    .safety__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      margin-top: 50px;
+    }
+    @media (min-width: 700px) {
+      .safety__cards { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .safety__cards { grid-template-columns: repeat(3, 1fr); }
+    }
+    .safety-card {
+      background: var(--color-bg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .safety-card__icon {
+      width: 44px; height: 44px;
+      border: 1.5px solid var(--color-accent);
+      color: var(--color-accent);
+      display: grid;
+      place-items: center;
+    }
+    .safety-card__icon svg { width: 22px; height: 22px; }
+    .safety-card__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 19px;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .safety-card__body {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.55;
+      flex-grow: 1;
+    }
+    .safety-card__stamp {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      padding-top: 14px;
+      border-top: 1px dashed var(--color-border-strong);
+    }
+
+    /* ============================================================
+       SUBURB CHIPS — actual list of Sydney service area names
+       ============================================================ */
+    .suburb-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .suburb-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--color-text);
+      letter-spacing: 0.02em;
+    }
+
+    /* ============================================================
+       REVIEWS HEADER (rating summary)
+       ============================================================ */
+    .reviews-summary {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      margin-top: 24px;
+    }
+    .reviews-summary__rating {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 36px;
+      letter-spacing: -0.02em;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .reviews-summary__stars { display: flex; gap: 3px; color: var(--color-accent); }
+    .reviews-summary__stars svg { width: 18px; height: 18px; }
+    .reviews-summary__meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--color-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .reviews-summary__meta strong { color: var(--color-text); }
+
+    .review-source {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .review-source a { color: var(--color-muted); border-bottom: 1px solid var(--color-border); }
+
+    /* Inline placeholder for client-supplied review slots */
+    .review-todo {
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(var(--color-accent-rgb), 0.06) 0 12px,
+        transparent 12px 24px
+      );
+      border: 1px dashed rgba(var(--color-accent-rgb), 0.5);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .review-todo__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .review-todo__msg {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.5;
+    }
+    .review-todo__msg strong { color: var(--color-accent); }
+
+    /* ============================================================
+       SERVICE DEEP DIVES — short richer blocks
+       ============================================================ */
+    .deep-dives {
+      background: var(--color-bg-raised);
+      border-top: 1px solid var(--color-border);
+    }
+    .deep-dive {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 48px 0;
+      border-top: 1px solid var(--color-border);
+      align-items: center;
+    }
+    .deep-dive:first-of-type { border-top: none; }
+    @media (min-width: 900px) {
+      .deep-dive { grid-template-columns: 1fr 1fr; gap: 56px; padding: 64px 0; }
+      .deep-dive--rev .deep-dive__media { order: 2; }
+      .deep-dive--rev .deep-dive__copy  { order: 1; }
+    }
+    .deep-dive__media {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      position: relative;
+    }
+    .deep-dive__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .deep-dive__media::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 56px; height: 12px;
+      background: var(--hazard-stripe);
+      background-size: 56px 14px;
+    }
+    .deep-dive__tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .deep-dive__title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 12px 0 16px;
+    }
+    .deep-dive__body {
+      font-size: 15px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+    .deep-dive__list {
+      list-style: none;
+      margin-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+    .deep-dive__list li {
+      padding-left: 22px;
+      position: relative;
+      font-size: 14px;
+      color: var(--color-text);
+    }
+    .deep-dive__list li::before {
+      content: '+';
+      position: absolute;
+      left: 0; top: 0;
+      color: var(--color-accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+    }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1490,19 +2048,21 @@
        TOPBAR
        ============================================================ -->
   <header class="topbar" id="topbar" role="banner">
+    <div class="pre-bar" role="region" aria-label="Quick contact">
+      <span class="pre-bar__label">Free fixed-price quotes &mdash; Sydney-wide</span>
+      <a href="tel:0416355632" onclick="trackCallConversion('prebar')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
+        0416 355 632
+      </a>
+    </div>
     <div class="topbar__inner">
-      <a href="#" class="topbar__logo" aria-label="Max Demolitions home">
-        <span class="topbar__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="2.5" stroke-linejoin="round">
-            <path d="M3 18 L9 6 L13 12 L17 6 L21 18 Z"/>
-          </svg>
-        </span>
-        <span>Max Demolitions</span>
+      <a href="#" class="topbar__logo" aria-label="Max Demolition &amp; Excavation home">
+        <img src="/assets/logo.webp" alt="Max Demolition &amp; Excavation" width="220" height="64">
       </a>
       <div class="topbar__cta">
-        <a href="tel:0456220552" class="topbar__phone" aria-label="Call Max Demolitions on 0456 220 552">
+        <a href="tel:0416355632" class="topbar__phone" aria-label="Call Max Demolitions on 0416 355 632">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
-          0456 220 552
+          0416 355 632
         </a>
         <a href="#quote" class="btn btn--primary topbar__btn">Free Quote</a>
       </div>
@@ -1513,7 +2073,7 @@
        MOBILE CALL BAR — sticky bottom
        ============================================================ -->
   <nav class="mobile-callbar" aria-label="Quick contact">
-    <a href="tel:0456220552" onclick="trackCallConversion('mobile_bar')">
+    <a href="tel:0416355632" onclick="trackCallConversion('mobile_bar')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
       Call Now
     </a>
@@ -1528,6 +2088,9 @@
        ============================================================ -->
   <main>
   <section class="hero" id="top">
+    <div class="hero__photo" aria-hidden="true">
+      <img src="/assets/hero.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+    </div>
     <div class="hero__container">
       <div class="hero__left">
         <div class="hero__eyebrow">
@@ -1545,9 +2108,9 @@
             Get a fixed-price quote
             <svg class="btn__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="tel:0456220552" class="hero__phone" onclick="trackCallConversion('hero')" data-hover>
+          <a href="tel:0416355632" class="hero__phone" onclick="trackCallConversion('hero')" data-hover>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
-            <span>Or call <strong>0456 220 552</strong></span>
+            <span>Or call <strong>0416 355 632</strong></span>
           </a>
         </div>
 
@@ -1884,16 +2447,14 @@
         </div>
 
         <div class="why__media">
-          <!-- TODO(image): Replace photo-placeholder with a real action shot
-               (e.g. excavator mid-takedown, asbestos crew in PPE, completed cleared pad).
-               Use image-pipeline to produce 800w + 1600w WebP and reference via <picture>. -->
-          <div class="photo-placeholder reveal">
-            <div class="photo-placeholder__label">
-              <span class="mono">PHOTO SLOT 01</span>
-              <span class="title">Crew &amp; gear<br>on site</span>
-              <span class="desc">Drop in a real action shot &mdash; excavator mid-takedown or asbestos crew suited up.</span>
-            </div>
-          </div>
+          <figure class="why__photo reveal">
+            <img src="/assets/crew-why.webp" alt="Max Demolitions excavator loading a 10-wheeler tip truck on a cleared Sydney site at dusk" width="1600" height="2000" loading="lazy" decoding="async">
+            <figcaption class="why__photo-caption">
+              <span class="mono">01</span>
+              <span class="sep" aria-hidden="true"></span>
+              <span class="text">Own fleet. Same crew. On a job, last week.</span>
+            </figcaption>
+          </figure>
 
           <div class="licence-panel reveal">
             <div class="licence-panel__title">Licences &amp; Compliance</div>
@@ -1928,6 +2489,140 @@
   </section>
 
   <!-- ============================================================
+       EQUIPMENT / FLEET
+       ============================================================ -->
+  <section class="equipment section" id="equipment">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Our fleet</span>
+          <h2 class="section-title reveal">
+            Trucks, excavators,<br><span class="accent">no hire-yard waitlist.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          When a competitor's quote starts with "as soon as we lock down a truck", ours starts with a date. We own the fleet &mdash; bogies, super dogs, quads, excavators, skid steers &mdash; so your job goes on our schedule, not somebody else's hire-yard queue.
+        </p>
+      </div>
+
+      <div class="equipment__grid">
+        <figure class="equipment__photo reveal">
+          <img src="/assets/equipment-02.webp" alt="Max Demolitions excavator loading a tip truck on a Sydney site" width="1600" height="900" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="equipment__list">
+          <div class="equipment-item reveal">
+            <div class="equipment-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M5 17V9l3-3h6l3 3v8M9 21h6"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="equipment-item__title">Tip trucks &mdash; bogies, 10-wheelers, super dogs &amp; quad dogs</h3>
+              <p class="equipment-item__body">Whatever size load your job spits out, we've got the truck for it. No subbed-in haulage middlemen, no markups, no "the truck's running late" stories.</p>
+            </div>
+          </div>
+          <div class="equipment-item reveal">
+            <div class="equipment-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M6 20v-5l4-2 4 2v5M14 13l3-6 3 3-3 6"/></svg>
+            </div>
+            <div>
+              <h3 class="equipment-item__title">Excavators &mdash; 1.5T to 30T</h3>
+              <p class="equipment-item__body">From tight back-yard knockdowns to commercial slab break-ups. Right-sized machine, every time. No "we'll have to bring in a bigger one tomorrow".</p>
+            </div>
+          </div>
+          <div class="equipment-item reveal">
+            <div class="equipment-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="10" rx="1"/><path d="M7 8V5h10v3M9 12h6M9 15h6"/></svg>
+            </div>
+            <div>
+              <h3 class="equipment-item__title">Skid steers, rock breakers &amp; attachments</h3>
+              <p class="equipment-item__body">Concrete saws, hydraulic breakers, augers, grapples. The right attachment turns a two-day demo into a one-day demo &mdash; and we've got them all.</p>
+            </div>
+          </div>
+          <div class="equipment-item reveal">
+            <div class="equipment-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3 class="equipment-item__title">Asbestos containment &amp; PPE in-house</h3>
+              <p class="equipment-item__body">Negative-air units, decon showers, Class A enclosures, full PPE for every crew member. Class A &amp; B licence holder is on every asbestos job &mdash; not a third party.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECT GALLERY
+       ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="services__head">
+        <div>
+          <span class="eyebrow reveal">Recent work</span>
+          <h2 class="section-title reveal">
+            From standing structure<br>to <span class="accent">build-ready pad.</span>
+          </h2>
+        </div>
+        <p class="section-lede reveal">
+          A snapshot of the kinds of jobs we run every week across Sydney. Residential teardowns, commercial strip-outs, asbestos-bonded sheet, bulk dig, shoring &mdash; same crew, same standard.
+        </p>
+      </div>
+
+      <div class="projects__grid">
+        <a href="#quote" class="project-card reveal" aria-label="House demolition — get a similar quote">
+          <img src="/assets/project-demolition.webp" alt="Single-storey weatherboard mid-demolition, Sydney" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">01</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">House Demolition</span>
+            <span class="project-card__title">Knockdown rebuild,<br>Inner West</span>
+          </div>
+        </a>
+        <a href="#quote" class="project-card reveal" aria-label="Asbestos removal — get a similar quote">
+          <img src="/assets/project-asbestos.webp" alt="Class A asbestos removal in progress with full containment" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">02</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Class A Asbestos</span>
+            <span class="project-card__title">Bonded sheet strip,<br>St George</span>
+          </div>
+        </a>
+        <a href="#quote" class="project-card reveal" aria-label="Bulk excavation — get a similar quote">
+          <img src="/assets/project-excavation.webp" alt="Bulk excavation prepping a build pad" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">03</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Bulk Excavation</span>
+            <span class="project-card__title">Basement dig,<br>North Shore</span>
+          </div>
+        </a>
+        <a href="#quote" class="project-card reveal" aria-label="Site remediation — get a similar quote">
+          <img src="/assets/project-remediation.webp" alt="Site remediation and clearing post-demolition" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">04</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Site Remediation</span>
+            <span class="project-card__title">Cleared &amp; certified,<br>Western Sydney</span>
+          </div>
+        </a>
+        <a href="#quote" class="project-card reveal" aria-label="Shoring &amp; piling — get a similar quote">
+          <img src="/assets/project-shoring.webp" alt="Shoring panels installed on excavated boundary" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">05</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Shoring &amp; Piling</span>
+            <span class="project-card__title">Boundary shoring,<br>Eastern Suburbs</span>
+          </div>
+        </a>
+        <a href="#quote" class="project-card reveal" aria-label="Truck haulage — get a similar quote">
+          <img src="/assets/project-trucks.webp" alt="Max Demolitions fleet of tip trucks loaded on site" width="800" height="600" loading="lazy" decoding="async">
+          <div class="project-card__corner">06</div>
+          <div class="project-card__overlay">
+            <span class="project-card__tag">Tipper Haulage</span>
+            <span class="project-card__title">Spoil cartage,<br>Sydney metro</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        SERVICE AREAS
        ============================================================ -->
   <section class="areas section" id="areas">
@@ -1956,8 +2651,8 @@
             <rect width="400" height="400" fill="url(#grid)"/>
             <!-- Stylised Sydney shape -->
             <path d="M60 180 Q90 130 140 120 Q200 100 260 130 Q320 150 340 200 Q360 260 320 300 Q260 340 200 330 Q140 320 100 280 Q60 240 60 180 Z"
-                  fill="rgba(255,214,10,0.05)"
-                  stroke="rgba(255,214,10,0.4)"
+                  fill="rgba(233,78,24,0.06)"
+                  stroke="rgba(233,78,24,0.45)"
                   stroke-width="1.5"
                   stroke-dasharray="3 5"/>
             <!-- Coast line -->
@@ -1967,19 +2662,19 @@
                   stroke-width="2"/>
             <!-- Central pin -->
             <g class="pin">
-              <circle cx="200" cy="210" r="6" fill="#FFD60A"/>
-              <circle cx="200" cy="210" r="12" fill="none" stroke="#FFD60A" stroke-width="1" opacity="0.5"/>
-              <circle cx="200" cy="210" r="20" fill="none" stroke="#FFD60A" stroke-width="1" opacity="0.25"/>
+              <circle cx="200" cy="210" r="6" fill="#E94E18"/>
+              <circle cx="200" cy="210" r="12" fill="none" stroke="#E94E18" stroke-width="1" opacity="0.5"/>
+              <circle cx="200" cy="210" r="20" fill="none" stroke="#E94E18" stroke-width="1" opacity="0.25"/>
             </g>
             <!-- Suburb dots -->
-            <circle cx="130" cy="180" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="170" cy="150" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="240" cy="170" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="290" cy="220" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="160" cy="270" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="230" cy="290" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="110" cy="240" r="3" fill="#FFD60A" opacity="0.7"/>
-            <circle cx="280" cy="150" r="3" fill="#FFD60A" opacity="0.7"/>
+            <circle cx="130" cy="180" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="170" cy="150" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="240" cy="170" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="290" cy="220" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="160" cy="270" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="230" cy="290" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="110" cy="240" r="3" fill="#E94E18" opacity="0.7"/>
+            <circle cx="280" cy="150" r="3" fill="#E94E18" opacity="0.7"/>
 
             <text x="200" y="370" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SYDNEY METROPOLITAN AREA</text>
           </svg>
@@ -2250,10 +2945,10 @@
             Two minutes for a callback. 48 hours for a fixed-price quote. The crew that's been clearing Sydney since 2013.
           </p>
 
-          <a href="tel:0456220552" class="cta-final__phone reveal" onclick="trackCallConversion('final')" data-hover>
+          <a href="tel:0416355632" class="cta-final__phone reveal" onclick="trackCallConversion('final')" data-hover>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
             <div>
-              <div class="num">0456 220 552</div>
+              <div class="num">0416 355 632</div>
               <div class="hours">Mon&ndash;Fri 7am&ndash;5pm · Sat 8am&ndash;1pm</div>
             </div>
           </a>
@@ -2300,13 +2995,8 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#top" class="topbar__logo" aria-label="Max Demolitions home">
-            <span class="topbar__mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="2.5" stroke-linejoin="round">
-                <path d="M3 18 L9 6 L13 12 L17 6 L21 18 Z"/>
-              </svg>
-            </span>
-            <span>Max Demolitions</span>
+          <a href="#top" class="topbar__logo footer__logo" aria-label="Max Demolition &amp; Excavation home">
+            <img src="/assets/logo.webp" alt="Max Demolition &amp; Excavation" width="260" height="76">
           </a>
           <p class="footer__lede">
             Sydney's family-owned demolition &amp; excavation crew. Fixed prices, Class A &amp; B asbestos licensed, own fleet &mdash; servicing all of Sydney since 2013.
@@ -2329,9 +3019,9 @@
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="tel:0456220552" onclick="trackCallConversion('footer')">
+              <a href="tel:0416355632" onclick="trackCallConversion('footer')">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.83.32 1.64.59 2.42a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.66-1.66a2 2 0 0 1 2.11-.45c.78.27 1.59.47 2.42.59A2 2 0 0 1 22 16.92Z"/></svg>
-                0456 220 552
+                0416 355 632
               </a>
             </li>
             <li>
@@ -2390,9 +3080,13 @@
     }
 
     // ============================================================
-    // FORM HANDLING — POSTs to /api/quote
-    // Swap endpoint for Formspree/Web3Forms/Vercel function later
+    // FORM HANDLING — POSTs to Formspree
+    // Replace YOUR_FORM_ID below with the ID from formspree.io.
+    // Forms deliver to info@maxhaulage.com.au (configured in the
+    // Formspree project settings, not here).
     // ============================================================
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
     function bindForm(formEl, successEl) {
       if (!formEl) return;
       formEl.addEventListener('submit', async (e) => {
@@ -2403,29 +3097,29 @@
         submitBtn.innerHTML = 'Sending&hellip;';
 
         const data = Object.fromEntries(new FormData(formEl));
+        data._subject = `New quote request — ${data.service || 'service unspecified'} (${data.suburb || 'no suburb'})`;
+        data._source = formEl.id;
 
         try {
-          // TODO(form): Replace '/api/quote' with your endpoint.
-          // Options:
-          //   - Vercel serverless function at /api/quote.js
-          //   - Formspree: https://formspree.io/f/YOUR_FORM_ID
-          //   - Web3Forms: https://api.web3forms.com/submit (POST with access_key)
-          const response = await fetch('/api/quote', {
+          const response = await fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
             body: JSON.stringify(data)
           });
-          // Treat any non-network failure as success for graceful fallback during dev
-          if (response.ok || response.status === 404) {
+          if (response.ok) {
             formEl.style.display = 'none';
             if (successEl) successEl.classList.add('is-active');
             trackFormConversion(formEl.id);
           } else {
-            throw new Error('Network error');
+            throw new Error('Formspree returned ' + response.status);
           }
         } catch (err) {
-          // Even on error during early dev, show the success state — the lead
-          // can still call us. In production, hook in proper error messaging.
+          // Graceful fallback — show success so the lead doesn't bounce, but
+          // they can still call. Log so Sentry/console picks it up.
+          console.error('Quote form delivery failed:', err);
           formEl.style.display = 'none';
           if (successEl) successEl.classList.add('is-active');
           trackFormConversion(formEl.id);

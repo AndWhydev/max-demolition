@@ -1,6 +1,6 @@
 # Max Demolitions — Google Ads Landing Page
 
-Single-page, single-file landing page built for Google Ads traffic. Two primary conversions: **phone call** (`tel:0456220552`) and **quote form**.
+Single-page, single-file landing page built for Google Ads traffic. Two primary conversions: **phone call** (`tel:0416355632`) and **quote form**.
 
 Built by All Webbed Up. Same single-file pattern as the Show Limousines site — no build step, no frameworks, no dependencies to install.
 
@@ -66,7 +66,7 @@ These are flagged in the HTML with `TODO:` markers. Replace before going live or
 - [ ] **ABN** — currently `TODO` in footer + Schema.org
 - [ ] **SafeWork NSW Asbestos Licence number** — currently `TODO` in licence panel
 - [ ] **NSW Demolition Licence number** — currently `TODO` in licence panel
-- [ ] **Confirm phone** is `0456 220 552` (extracted from live site)
+- [x] **Phone** confirmed: `0416 355 632` (client-provided 2026-06-14)
 - [ ] **Confirm email** is `info@maxhaulage.com.au` (extracted from live site)
 - [ ] **Confirm $20M public liability** figure — currently used in trust strip + hero (live site only says "comprehensive public liability"). Adjust if different.
 - [ ] **Confirm "12+ years operating"** stat — live site says "since 2013", which gives 12 years in 2026
@@ -78,35 +78,23 @@ These are flagged in the HTML with `TODO:` markers. Replace before going live or
 - [ ] **GA4 measurement ID** — uncomment and replace `G-XXXXXXX` in the `<head>`
 - [ ] **Google Ads conversion ID + labels** — replace `AW-XXXXXXX/abc123` (call conversion) and `AW-XXXXXXX/xyz456` (form conversion) in the JS `trackCallConversion()` and `trackFormConversion()` functions
 
-### Form endpoint — must be wired before launching ads
-The form currently POSTs to `/api/quote` which doesn't exist yet. Pick one of these:
+### Form endpoint — Formspree (wired, needs form ID)
+The quote form already POSTs to Formspree. Before launching ads:
 
-**Option 1 — Vercel serverless function** (recommended)
-Create `api/quote.js`:
-```js
-export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).end();
-  const { name, phone, suburb, service, details } = req.body;
-  // Forward to your email — use Resend, Postmark, SendGrid, or simple SMTP
-  // Example with Resend:
-  // await fetch('https://api.resend.com/emails', { ... });
-  res.status(200).json({ ok: true });
-}
-```
+1. Sign up at https://formspree.io with `info@maxhaulage.com.au` as the receiving address.
+2. Create a new form, copy the form ID (looks like `xqkrgldz`).
+3. In `index.html`, find `FORMSPREE_ENDPOINT` (one occurrence near the bottom of the `<script>` block) and replace `YOUR_FORM_ID` with the real ID.
+4. Submit one test entry from the live URL to confirm the email lands in the inbox (and check spam once so Formspree mail isn't filtered).
 
-**Option 2 — Formspree**
-- Sign up at formspree.io, get a form ID
-- In `index.html`, search for `'/api/quote'` (two occurrences) and replace with `https://formspree.io/f/YOUR_FORM_ID`
+Form payload also sends `_subject` (so emails arrive with a useful subject line like *"New quote request — house-demolition (Bondi)"*) and `_source` (so we can tell hero form vs final-CTA form apart).
 
-**Option 3 — Web3Forms** (free, no signup tier)
-- Get an access key from web3forms.com
-- Change the fetch URL to `https://api.web3forms.com/submit` and include `access_key` in the payload
-
-### Imagery — add when client provides photos
-- [ ] **"Crew & gear on site" photo slot** (in Why Us section) — replace `.photo-placeholder` with real action shot. Best subjects: excavator mid-takedown, asbestos crew in full PPE, completed cleared pad ready for footings. Use 4:5 aspect ratio (vertical).
-- [ ] Optional: add a small project gallery section if client provides 6–8 before/after shots
-- [ ] Replace inline SVG favicon with branded favicon.svg/png once client supplies logo file
-- [ ] Add a real `og-image.jpg` (1200×630px) for the OG/Twitter meta tags — currently referenced as `/og-image.jpg` but file doesn't exist
+### Imagery — wired in
+- [x] **Hero background** — `assets/hero.webp` (excavator mid-takedown, dust)
+- [x] **Why-us "crew on site" photo** — `assets/crew-why.webp` (4:5 vertical, dusk worksite)
+- [x] **Equipment section** — `assets/equipment-02.webp` (excavator + tip truck)
+- [x] **Project gallery** — 6 cards drawing from `project-*.webp` assets
+- [x] **Logo** — `assets/logo.webp` in topbar (on warm-white plate) + footer
+- [ ] Optional: add a real `og-image.jpg` (1200×630px) for OG/Twitter cards — currently referenced as `/og-image.jpg`, file doesn't exist. The hero shot makes a great OG.
 
 ---
 
@@ -117,7 +105,7 @@ Pulled from `https://maxdemolitions.com.au/` on build day:
 | Item | Value | Source |
 |------|-------|--------|
 | Business name | Max Demolitions / Max Demolitions & Excavations | homepage |
-| Phone | 0456 220 552 | every page |
+| Phone | 0416 355 632 | client-confirmed |
 | Email | info@maxhaulage.com.au | every page |
 | Established | 2013 | About Us page |
 | Ownership | Family-owned | About Us page |
