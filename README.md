@@ -1,6 +1,6 @@
 # Max Demolitions — Google Ads Landing Page
 
-Single-page, single-file landing page built for Google Ads traffic. Two primary conversions: **phone call** (`tel:0416355632`) and **quote form**.
+Single-page, single-file landing page built for Google Ads traffic. Two primary conversions: **phone call** (`tel:0456220552`) and **quote form**.
 
 Built by All Webbed Up. Same single-file pattern as the Show Limousines site — no build step, no frameworks, no dependencies to install.
 
@@ -66,7 +66,7 @@ These are flagged in the HTML with `TODO:` markers. Replace before going live or
 - [ ] **ABN** — currently `TODO` in footer + Schema.org
 - [ ] **SafeWork NSW Asbestos Licence number** — currently `TODO` in licence panel
 - [ ] **NSW Demolition Licence number** — currently `TODO` in licence panel
-- [x] **Phone** confirmed: `0416 355 632` (client-provided 2026-06-14)
+- [x] **Phone** confirmed: `0456 220 552` (client-provided 2026-06-14)
 - [ ] **Confirm email** is `info@maxhaulage.com.au` (extracted from live site)
 - [ ] **Confirm $20M public liability** figure — currently used in trust strip + hero (live site only says "comprehensive public liability"). Adjust if different.
 - [ ] **Confirm "12+ years operating"** stat — live site says "since 2013", which gives 12 years in 2026
@@ -104,7 +104,7 @@ Pulled from `https://maxdemolitions.com.au/` on build day:
 | Item | Value | Source |
 |------|-------|--------|
 | Business name | Max Demolitions / Max Demolitions & Excavations | homepage |
-| Phone | 0416 355 632 | client-confirmed |
+| Phone | 0456 220 552 | client-confirmed |
 | Email | info@maxhaulage.com.au | every page |
 | Established | 2013 | About Us page |
 | Ownership | Family-owned | About Us page |
