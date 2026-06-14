@@ -601,18 +601,19 @@
       letter-spacing: -0.01em;
     }
 
-    /* Hero trust strip */
-    .hero__trust {
-      margin-top: 44px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px 28px;
-      padding-top: 28px;
-      border-top: 1px solid var(--color-border);
-      max-width: 560px;
-    }
-    @media (min-width: 600px) {
-      .hero__trust { grid-template-columns: repeat(4, 1fr); }
+    /* Hero trust strip — desktop only; the dark .trust-strip
+       directly below the hero covers the same ground on mobile. */
+    .hero__trust { display: none; }
+    @media (min-width: 1024px) {
+      .hero__trust {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px 28px;
+        padding-top: 28px;
+        border-top: 1px solid var(--color-border);
+        max-width: 560px;
+      }
     }
     .trust-item {
       display: flex;
