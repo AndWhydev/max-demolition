@@ -23,8 +23,10 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121212'/%3E%3Cpath d='M10 46 L24 18 L34 30 L44 18 L58 46 Z' fill='%23E94E18'/%3E%3Crect x='10' y='50' width='48' height='6' fill='%23E94E18'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="/assets/logo.webp">
 
-  <!-- Preload hero image and logo so they paint in first viewport -->
-  <link rel="preload" as="image" href="/assets/hero.webp" fetchpriority="high">
+  <!-- Preload hero image and logo so they paint in first viewport.
+       Mobile gets the 800w variant; desktop gets the original. -->
+  <link rel="preload" as="image" href="/assets/hero-800w.webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/hero.webp" media="(min-width: 900px)" fetchpriority="high">
   <link rel="preload" as="image" href="/assets/logo.webp">
 
   <!-- Preconnect -->
@@ -2107,7 +2109,10 @@
   <main>
   <section class="hero" id="top">
     <div class="hero__photo" aria-hidden="true">
-      <img src="/assets/hero.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+      <picture>
+        <source media="(max-width: 899px)" srcset="/assets/hero-800w.webp">
+        <img src="/assets/hero.webp" alt="" width="1308" height="671" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <div class="hero__container">
       <div class="hero__left">
@@ -2466,7 +2471,10 @@
 
         <div class="why__media">
           <figure class="why__photo reveal">
-            <img src="/assets/crew-why.webp" alt="Max Demolitions excavator loading a 10-wheeler tip truck on a cleared Sydney site at dusk" width="1600" height="2000" loading="lazy" decoding="async">
+            <picture>
+              <source media="(max-width: 899px)" srcset="/assets/crew-why-800w.webp">
+              <img src="/assets/crew-why.webp" alt="Max Demolitions excavator loading a 10-wheeler tip truck on a cleared Sydney site at dusk" width="1596" height="927" loading="lazy" decoding="async">
+            </picture>
             <figcaption class="why__photo-caption">
               <span class="mono">01</span>
               <span class="sep" aria-hidden="true"></span>
@@ -2525,7 +2533,10 @@
 
       <div class="equipment__grid">
         <figure class="equipment__photo reveal">
-          <img src="/assets/equipment-02.webp" alt="Max Demolitions excavator loading a tip truck on a Sydney site" width="1600" height="900" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 899px)" srcset="/assets/equipment-02-800w.webp">
+            <img src="/assets/equipment-02.webp" alt="Max Demolitions excavator loading a tip truck on a Sydney site" width="912" height="469" loading="lazy" decoding="async">
+          </picture>
         </figure>
 
         <div class="equipment__list">
@@ -2589,7 +2600,10 @@
 
       <div class="projects__grid">
         <a href="#quote" class="project-card reveal" aria-label="House demolition — get a similar quote">
-          <img src="/assets/project-demolition.webp" alt="Single-storey weatherboard mid-demolition, Sydney" width="800" height="600" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 599px)" srcset="/assets/project-demolition-800w.webp">
+            <img src="/assets/project-demolition.webp" alt="Single-storey weatherboard mid-demolition, Sydney" width="1000" height="750" loading="lazy" decoding="async">
+          </picture>
           <div class="project-card__corner">01</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">House Demolition</span>
@@ -2597,7 +2611,10 @@
           </div>
         </a>
         <a href="#quote" class="project-card reveal" aria-label="Asbestos removal — get a similar quote">
-          <img src="/assets/project-asbestos.webp" alt="Class A asbestos removal in progress with full containment" width="800" height="600" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 599px)" srcset="/assets/project-asbestos-800w.webp">
+            <img src="/assets/project-asbestos.webp" alt="Class A asbestos removal in progress with full containment" width="1200" height="1137" loading="lazy" decoding="async">
+          </picture>
           <div class="project-card__corner">02</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">Class A Asbestos</span>
@@ -2605,7 +2622,7 @@
           </div>
         </a>
         <a href="#quote" class="project-card reveal" aria-label="Bulk excavation — get a similar quote">
-          <img src="/assets/project-excavation.webp" alt="Bulk excavation prepping a build pad" width="800" height="600" loading="lazy" decoding="async">
+          <img src="/assets/project-excavation.webp" alt="Bulk excavation prepping a build pad" width="800" height="741" loading="lazy" decoding="async">
           <div class="project-card__corner">03</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">Bulk Excavation</span>
@@ -2613,7 +2630,7 @@
           </div>
         </a>
         <a href="#quote" class="project-card reveal" aria-label="Site remediation — get a similar quote">
-          <img src="/assets/project-remediation.webp" alt="Site remediation and clearing post-demolition" width="800" height="600" loading="lazy" decoding="async">
+          <img src="/assets/project-remediation.webp" alt="Site remediation and clearing post-demolition" width="800" height="650" loading="lazy" decoding="async">
           <div class="project-card__corner">04</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">Site Remediation</span>
@@ -2621,7 +2638,7 @@
           </div>
         </a>
         <a href="#quote" class="project-card reveal" aria-label="Shoring &amp; piling — get a similar quote">
-          <img src="/assets/project-shoring.webp" alt="Shoring panels installed on excavated boundary" width="800" height="600" loading="lazy" decoding="async">
+          <img src="/assets/project-shoring.webp" alt="Shoring panels installed on excavated boundary" width="800" height="533" loading="lazy" decoding="async">
           <div class="project-card__corner">05</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">Shoring &amp; Piling</span>
@@ -2629,7 +2646,10 @@
           </div>
         </a>
         <a href="#quote" class="project-card reveal" aria-label="Truck haulage — get a similar quote">
-          <img src="/assets/project-trucks.webp" alt="Max Demolitions fleet of tip trucks loaded on site" width="800" height="600" loading="lazy" decoding="async">
+          <picture>
+            <source media="(max-width: 599px)" srcset="/assets/project-trucks-800w.webp">
+            <img src="/assets/project-trucks.webp" alt="Max Demolitions fleet of tip trucks loaded on site" width="1113" height="861" loading="lazy" decoding="async">
+          </picture>
           <div class="project-card__corner">06</div>
           <div class="project-card__overlay">
             <span class="project-card__tag">Tipper Haulage</span>
