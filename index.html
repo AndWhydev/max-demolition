@@ -94,22 +94,23 @@
 
   <style>
     /* ============================================================
-       MAX DEMOLITIONS — design tokens
+       MAX DEMOLITIONS — design tokens (LIGHT theme, matches live site)
        Brand palette extracted from maxdemolitions.com.au:
-       - Primary near-black #121212
+       - Primary near-black #121212 (body text + dark sections)
        - Brand accent deep orange #e94e18 (their --e-global-color-accent)
        - Highlight safety yellow #f9d11a (used on their CTAs)
+       - Light section bg #f6f6f6 / dividers #efefef
        ============================================================ */
     :root {
-      --color-bg: #0E0E0F;
-      --color-bg-raised: #161617;
-      --color-surface: #1C1C1E;
-      --color-surface-2: #26262A;
-      --color-border: rgba(255,255,255,0.08);
-      --color-border-strong: rgba(255,255,255,0.18);
-      --color-text: #F4F4F5;
-      --color-muted: #A0A0A4;        /* WCAG AA on #0E0E0F = 9.4:1 */
-      --color-muted-2: #6E6E72;
+      --color-bg: #FFFFFF;
+      --color-bg-raised: #F6F6F6;
+      --color-surface: #FFFFFF;
+      --color-surface-2: #EFEFEF;
+      --color-border: rgba(18,18,18,0.10);
+      --color-border-strong: rgba(18,18,18,0.20);
+      --color-text: #121212;
+      --color-muted: #5A5A5E;        /* AA on #FFFFFF = 7.0:1 */
+      --color-muted-2: #888888;
 
       /* Max Demolitions brand palette */
       --color-accent: #E94E18;       /* primary brand orange */
@@ -118,7 +119,7 @@
       --color-accent-rgb: 233, 78, 24;
       --color-hot-rgb: 249, 209, 26;
 
-      --color-concrete: #A0A0A4;
+      --color-concrete: #888888;
       --color-rebar: #E94E18;
 
       /* Hazard tape gradient — orange + black, on-brand */
@@ -130,6 +131,22 @@
       --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
       --max-w: 1320px;
+    }
+
+    /* Dark-theme scope — applied inside footer so light tokens
+       above don't need to be repeated for every dark child. */
+    .theme-dark {
+      --color-bg: #0E0E0F;
+      --color-bg-raised: #161617;
+      --color-surface: #1C1C1E;
+      --color-surface-2: #26262A;
+      --color-border: rgba(255,255,255,0.08);
+      --color-border-strong: rgba(255,255,255,0.18);
+      --color-text: #F4F4F5;
+      --color-muted: #A0A0A4;
+      --color-muted-2: #6E6E72;
+      background: var(--color-bg);
+      color: var(--color-text);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -200,8 +217,8 @@
       content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 200px 200px;
-      opacity: 0.05; pointer-events: none; z-index: 9996;
-      mix-blend-mode: overlay;
+      opacity: 0.025; pointer-events: none; z-index: 9996;
+      mix-blend-mode: multiply;
     }
 
     /* ----- Custom cursor — desktop only ----- */
@@ -270,7 +287,7 @@
     }
     .btn--dark {
       background: #121212;
-      color: var(--color-text);
+      color: #FFFFFF;
       border-color: #121212;
     }
     .btn--dark:hover {
@@ -324,11 +341,12 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      background: rgba(14, 14, 15, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       transition: transform 0.35s var(--ease-out);
+      box-shadow: 0 1px 0 rgba(18,18,18,0.04);
     }
     /* Above the main topbar — visible from first paint on mobile */
     .pre-bar {
@@ -375,22 +393,16 @@
     .topbar__logo {
       display: inline-flex;
       align-items: center;
-      gap: 0;
-      padding: 6px 12px;
-      background: #F5F2EC;          /* warm off-white plate so the brand-accurate logo reads against dark topbar */
-      border-radius: 6px;
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 4px 14px rgba(0,0,0,0.35);
       transition: transform 0.25s var(--ease-out);
     }
     .topbar__logo:hover { transform: translateY(-1px); }
     .topbar__logo img {
-      height: 36px;
+      height: 42px;
       width: auto;
       display: block;
     }
     @media (max-width: 520px) {
-      .topbar__logo { padding: 5px 9px; }
-      .topbar__logo img { height: 28px; }
+      .topbar__logo img { height: 34px; }
     }
 
     .topbar__cta {
@@ -457,8 +469,8 @@
     }
     .mobile-callbar a:last-child {
       background: #121212;
-      color: var(--color-text);
-      border-left: 1px solid var(--color-border);
+      color: #FFFFFF;
+      border-left: 1px solid rgba(255,255,255,0.12);
     }
     .mobile-callbar svg { width: 16px; height: 16px; }
     @media (min-width: 900px) {
@@ -475,11 +487,11 @@
       align-items: center;
       overflow: hidden;
       background:
-        radial-gradient(ellipse 80% 50% at 80% 20%, rgba(var(--color-accent-rgb), 0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 10% 90%, rgba(var(--color-hot-rgb), 0.05) 0%, transparent 60%),
-        linear-gradient(180deg, #121212 0%, #161617 100%);
+        radial-gradient(ellipse 70% 60% at 95% 20%, rgba(var(--color-accent-rgb), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 5% 95%, rgba(var(--color-hot-rgb), 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #FFFFFF 0%, #F6F6F6 100%);
     }
-    /* Real hero photo, layered behind content with a dark gradient veil */
+    /* Hero photo emerges on the right; left side fades to white for headline legibility */
     .hero__photo {
       position: absolute;
       inset: 0;
@@ -491,22 +503,21 @@
       height: 100%;
       object-fit: cover;
       object-position: center right;
-      opacity: 0.30;
-      filter: contrast(1.05) saturate(0.85);
+      opacity: 1;
     }
     .hero__photo::after {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, #121212 0%, rgba(18,18,18,0.55) 55%, transparent 100%),
-        linear-gradient(180deg, transparent 0%, rgba(18,18,18,0.9) 100%);
+        linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.55) 65%, transparent 100%),
+        linear-gradient(180deg, transparent 60%, rgba(255,255,255,0.85) 100%);
     }
     @media (max-width: 899px) {
-      .hero__photo img { opacity: 0.18; object-position: center; }
+      .hero__photo img { object-position: 70% center; opacity: 0.55; }
       .hero__photo::after {
         background:
-          linear-gradient(180deg, rgba(18,18,18,0.55) 0%, rgba(18,18,18,0.92) 60%, #121212 100%);
+          linear-gradient(180deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.85) 55%, #FFFFFF 100%);
       }
     }
     /* Diagonal hazard tape behind hero */
@@ -520,7 +531,7 @@
       background: var(--hazard-stripe);
       background-size: 56px 14px;
       transform: rotate(-12deg);
-      opacity: 0.10;
+      opacity: 0.08;
       pointer-events: none;
       z-index: 1;
     }
@@ -671,11 +682,11 @@
        HERO QUOTE FORM — right column on desktop
        ============================================================ */
     .quote-card {
-      background: var(--color-surface);
+      background: #FFFFFF;
       border: 1px solid var(--color-border);
       padding: 36px 28px 32px;
       position: relative;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 18px 48px rgba(18,18,18,0.10), 0 2px 6px rgba(18,18,18,0.04);
     }
     .quote-card::before {
       content: '';
@@ -723,13 +734,13 @@
     }
     .input, .select, .textarea {
       width: 100%;
-      background: var(--color-bg);
+      background: #FAFAFA;
       border: 1px solid var(--color-border-strong);
       color: var(--color-text);
       padding: 14px 16px;
       font-size: 16px;          /* >=16px to prevent iOS zoom on focus */
       border-radius: 0;
-      transition: border-color 0.25s, background 0.25s;
+      transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
       font-family: 'Inter', sans-serif;
       min-height: 48px;         /* WCAG 2.5.5 touch target */
     }
@@ -738,7 +749,8 @@
     .input:focus, .select:focus, .textarea:focus {
       outline: none;
       border-color: var(--color-accent);
-      background: #0F0F11;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.15);
     }
     .input::placeholder, .textarea::placeholder { color: var(--color-muted-2); }
     .textarea { min-height: 90px; resize: vertical; line-height: 1.5; }
@@ -785,8 +797,8 @@
        ============================================================ */
     .trust-strip {
       background: #121212;
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
+      border-top: 1px solid #121212;
+      border-bottom: 1px solid #121212;
       padding: 36px 0;
       overflow: hidden;
     }
@@ -872,7 +884,7 @@
       min-height: 320px;
     }
     .service:hover {
-      background: var(--color-surface);
+      background: var(--color-bg-raised);
     }
     .service__num {
       font-family: 'JetBrains Mono', monospace;
@@ -1266,13 +1278,19 @@
       .testimonials__grid > :nth-child(2) { transform: translateY(40px); }
     }
     .testimonial {
-      background: var(--color-bg);
+      background: #FFFFFF;
       border: 1px solid var(--color-border);
       padding: 32px 28px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       position: relative;
+      box-shadow: 0 2px 12px rgba(18,18,18,0.04);
+      transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
+    }
+    .testimonial:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(18,18,18,0.10);
     }
     .testimonial__stars {
       display: flex;
@@ -2175,7 +2193,7 @@
   <!-- ============================================================
        TRUST STRIP
        ============================================================ -->
-  <section class="trust-strip" aria-label="Credentials">
+  <section class="trust-strip theme-dark" aria-label="Credentials">
     <div class="container">
       <div class="trust-strip__inner">
         <div class="trust-pill">
@@ -2645,7 +2663,7 @@
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sydney service area map">
             <defs>
               <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(18,18,18,0.06)" stroke-width="1"/>
               </pattern>
             </defs>
             <rect width="400" height="400" fill="url(#grid)"/>
@@ -2658,7 +2676,7 @@
             <!-- Coast line -->
             <path d="M340 80 Q350 200 320 350"
                   fill="none"
-                  stroke="rgba(255,255,255,0.2)"
+                  stroke="rgba(18,18,18,0.22)"
                   stroke-width="2"/>
             <!-- Central pin -->
             <g class="pin">
@@ -2676,7 +2694,7 @@
             <circle cx="110" cy="240" r="3" fill="#E94E18" opacity="0.7"/>
             <circle cx="280" cy="150" r="3" fill="#E94E18" opacity="0.7"/>
 
-            <text x="200" y="370" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SYDNEY METROPOLITAN AREA</text>
+            <text x="200" y="370" text-anchor="middle" fill="rgba(18,18,18,0.45)" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SYDNEY METROPOLITAN AREA</text>
           </svg>
         </div>
 
@@ -2933,7 +2951,7 @@
   <!-- ============================================================
        FINAL CTA
        ============================================================ -->
-  <section class="cta-final section">
+  <section class="cta-final section theme-dark">
     <div class="container">
       <div class="cta-final__grid">
         <div>
@@ -2991,7 +3009,7 @@
   <!-- ============================================================
        FOOTER
        ============================================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer theme-dark" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
